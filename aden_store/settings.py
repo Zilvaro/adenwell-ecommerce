@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,9 +33,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'adenapp',
     'products',
-
-
-
 ]
 
 MIDDLEWARE = [
@@ -69,7 +67,6 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
@@ -88,7 +85,6 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-
 
 WSGI_APPLICATION = 'aden_store.wsgi.application'
 
