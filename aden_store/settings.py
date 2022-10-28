@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'adenapp',
     'products',
     'bag',
+    'checkout',
 ]
 
 MIDDLEWARE = [
