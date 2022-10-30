@@ -141,7 +141,7 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51LyWlHJJuljkbwSZS8FU3bjKqRjklQOkZ9lYk3k3sxfw8xxNcS6hHAiDh9TI12Xt7aHC24oXDni3e7VLCgy9Jcle00wcc9w6XK',
+        'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
 
