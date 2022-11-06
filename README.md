@@ -28,16 +28,21 @@ The working version of the AdenWell e-commerce app can be found [here](https://d
       - [User Goals](#user-goals)
       - [Strategy Table](#strategy-table)
     - [Scope](#scope)
-      - [Security](#security)
-      - [User Stories - usage](#user-stories---usage)
-      - [User Stories - creation](#user-stories---creation)
+      - [User Stories](#user-stories)
+        - [User Stories - Viewing and Navigation](#user-stories---viewing-and-navigation)
+        - [User Stories - Registration and User Account](#user-stories---registration-and-user-account)
+        - [User Stories - Sorting and Searching](#user-stories---sorting-and-searching)
+        - [User Stories - Purchasing and Checkout](#user-stories---purchasing-and-checkout)
+        - [User Stories - Admin and Store Management](#user-stories---admin-and-store-management)
       - [Things, left "for next Iteration"](#things-left-for-next-iteration)
-    - [Stages](#stages)
-      - [Ideation, prioritization and planning](#ideation-prioritization-and-planning)
-      - [Database Models](#database-models)
+    - [Structure](#structure)
+      - [Database Model](#database-model)
+      - [Wireframes](#wireframes)
     - [Surface](#surface)
       - [Color Scheme](#color-scheme)
       - [Typography](#typography)
+  - [Marketing](#marketing)
+    - [Search Engine Optimisation](#search-engine-optimisation)
   - [Features - Finished Product](#features---finished-product)
     - [General](#general)
   - [Technologies Used](#technologies-used)
@@ -227,45 +232,57 @@ According to the strategy table, not all features can be implemented in the firs
 * Additional payment options
 
 
+#### User Stories
+
+GitHub projects was used as project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress. Each UserStory was given a priority label and a milestone note.
 
 
-#### Security
-
-* Site users are able to register an account in order to interact with the content.
-
-* User can't select the author, he is author by default.
-
-* Update/Delete content/post are not accessible via browser if you are not the author.
-
-* Users can update/delete only the posts/content they have created.
-
-* Users can't make a draft of the Post - to keep the system and database cleaner.
+![User Stories Progress - GitHub](/media/readme_files/userstories-prioritylabels-milestones.JPG)
 
 
-#### User Stories - usage
+##### User Stories - Viewing and Navigation
 
-1.	As a **Site User** I can **register an account** so that **I can comment and like**
-2.	As a **Site User** I can **view a list of posts** so that **I can select one to read**
-3.	As a **Site User** I can **click on a post** so that **I can read the full text**
-4.	As a **Site User** I can **leave comments on a post** so that **I can be involved in the conversation**
-5.	As a **Site User** I can **like or unlike a post** so that **I can interact with the content**
-6.	As a **Site User** I can **click on a content** so that **I can read more about the topic**
-7.	As a **User / Admin** I can **view the number of likes on each post** so that **I can see which is the most popular or viral**
-8.	As a **User / Admin** I can **view comments on an individual post** so that **I can read the conversation**
+1.	As a **Shopper** I want to be able **view a list of products**, so that I can **select some to purchase**
+2.	As a **Shopper** I want to be able **view individual product details**, so that I can **identify the price, description, product rating, product image and available sizes**
+3.	As a **Shopper** I want to be able **quickly identify deals, clearance items and special offers**, so that I can **take advantage of special savings on products I'd like to purchase**
+4.	As a **Shopper** I want to be able **easily view the total of my purchases at any time**, so that I can **avoid spending too much**
 
+##### User Stories - Registration and User Account
 
-#### User Stories - creation
+5.	As a **Site User** I want to be able **easily register for an account**, so that I can **have a personal account and be able to view my profile**
+6.	As a **Site User** I want to be able **easily login or logout**, so that I can **access my personal account information**
+7.	As a **Site User** I want to be able **easily recover my password in case I forget it**, so that I can **recover access to my account**
+8.	As a **Site User** I want to be able **receive an email confirmation after registering**, so that I can **verify that my account registration was successful**
+9.	As a **Site User** I want to be able **have a personalized user profile**, so that I can **view my personal order history and order confirmations, and save my payment information**
+10.	As a **Site User** I want to be able **I can sign up for a newsletter**, so that I can **know new product releases and offers**
+11.	As a **Site User** I want to be able **I can send a message to admin**, so that I can **Ask question or make inquiry about faulty product**
 
-9.	As a **User-admin** I can **create, edit, and delete a) content & b) posts directly on app** so that **I can manage the content area without accessing admin module**
-10.	As an **Admin** I can **create draft content** so that **I can publish/ update or delete later** 
-11.	As an **Admin** I can **approve or disapprove comments** so that **I can filter out objectionable comments**
-12.	As an **Admin** I can **set the content width** so that **I can place different number of items on one row**
-13.	As a **Site Admin** I can **assign the post position number**, so **I can place posts according to importance** 
-14.	As an **Admin** I can **select the card height** so that **I can create better looking design**
-15.	As an **Admin** I can **select the card template** so that **I can create dynamic looking design**
-16.	As a **User** I can **create a contact message** so that **I can express my opinion or ask to contact back**
+##### User Stories - Sorting and Searching
 
-  
+12.	As a **Shopper** I want to be able **sort the list of available products**, so that I can **easily identify the best rated, best priced, and categorically sorted products**
+13.	As a **Shopper** I want to be able **sort a specific category of product**, so that I can **find the best-priced or best rated products in a specific category, or sort the products in that category by name**
+14.	As a **Shopper** I want to be able** sort multiple categories of products simultaneously**, so that I can **find the best-priced or best-rated products across broad categories, such as "supplements" or "wellness"**
+15.	As a **Shopper** I want to be able** search for a product by name or description**, so that I can** find a specific product I'd like to purchase**
+16.	As a **Shopper** I want to be able **easily see what I've searched for and the number of results**, so that I can **quickly decide whether the product I want is available**
+
+##### User Stories - Purchasing and Checkout
+
+17.	As a **Shopper** I want to be able **easily select the variant and quantity of a product when purchasing it**, so that I can **ensure I don't accidentally select the wrong product, quantity or size**
+18.	As a **Shopper** I want to be able** view items in my bag to be purchased**, so that I can **identify the total cost of my purchase before checkout**
+19.	As a **Shopper** I want to be able **adjust the quantity of individual items in my bag**, so that I can **easily make changes to my purchase before checkout**
+20.	As a **Shopper** I want to be able **easily enter my payment information**, so that I can **check out quickly and with no hassles**
+21.	As a **Shopper** I want to be able **feel my personal and payment information is safe and secure**, so that I can **confidently provide the needed information to make a purchase**
+22.	As a **Shopper** I want to be able **view an order confirmation after checkout**, so that I can **verify that I haven't made any mistakes**
+23.	As a **Shopper** I want to be able **receive an email confirmation after checking out**, so that I can **keep the confirmation of what I've purchased for my records**
+
+##### User Stories - Admin and Store Management
+
+24.	As a **Admin** I want to be able **add a product**, so that I can **add new items to my store**
+25.	As a **Admin** I want to be able **edit/update a product**, so that I can **change product prices, descriptions, images, and other product criteria**
+26.	As a **Admin** I want to be able **delete a product**, so that I can **remove items that are no longer for sale**
+27.	As a **Admin** I want to be able **add, edit or delete a content item**, so that I can **create an impulse to buy**
+28.	As a **Admin** I want to be able **organize external database**, so that I can **manage all site’s data securely**
+
 
 #### Things, left "for next Iteration"
 
@@ -276,151 +293,41 @@ According to the strategy table, not all features can be implemented in the firs
 * Social media sign-up
 
 
-### Stages
-[Go to the top](#table-of-contents)
+### Structure
 
-The Planning & Execution of DigitalZ-Aden project was in 4 distinct phases: 
+The website has been organized in a Hierarchical Tree Structure to ensure the site user navigates through the site effortlessly and intuitively. Here you can you can find the website map design.
 
-#### Ideation, prioritization and planning
-
-The current webdesign of AdenWellness [here](https://adenwell.com/) was reviewed and discussed, what would be the 'wishes' for the new design:
-
-* Responsive design
+![AdenWell website map](/media/readme_files/aden_e-com_wire_flow%20.png)
 
 * Header, footer and navigation bar are consistent through all pages.
 
-* Account registration
+* Links and forms provide clear feedback to the site user.
 
-* Create, edit and delete content from front-end, not only from admin module
+* New additional content features are provided for the shopper once they register an account.
 
-* Separate permanent content from the promotional materials and posts
-
-* Ability to interact with users via comments and contact messages
-
-* Ability to create interesting and varied content without using other tools (editors, designer tools)
-
-* No link (at the moment) to external sources : Amazon, e-commerce, etc.
+* A 404-error page is available.
 
 
-As an outcome - simple sketch of structure was drawn and defined **3 phases** of the software development. 
+#### Database Model
 
-  **!** - content is created by the user either by upload of image or made using CRUD functionality & Summernote directly from the front-end.
-![Digitalz Aden website map](assets/readme_files/digitalz_aden_wire_flow.jpg)
-![Digitalz Aden balsamiq - desktop](assets/readme_files/aden-home-balsamiq-desktop.jpg)
-![Digitalz Aden balsamiq - mobile](assets/readme_files/aden-home-balsamiq-mobile.png)
+The database model has been designed using [lucidapp](https://lucid.app/). The type of database being used for the is relational database being managed using SQLite3 during development and deployed using [PostgreSQL](https://www.postgresql.org/).
 
-* 3 phases of software development were defined as projects with unique User Stories and Tasks
-![Digitalz Aden projects](assets/readme_files/projects-list.JPG)
+![AdenWell E-commerce Database Model](/media/readme_files/database-model.png)
 
 
-GitHub projects was used as project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress.
+#### Wireframes
 
-**Second Phase**
+[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
 
-Second phase was to create the full CRUD functionality for 'blog-posts' that in real life would serve as promotional, informational pieces. 
-
-* Create, read, update and delete posts as author
-* Leave comment
-* Like/Unlike the post
-
-![Digitalz Aden post-project](assets/readme_files/aden-blog-userstories-project.JPG)
-
-
-**Third Phase**
-
-Third phase was to create the full CRUD functionality for 'content' pieces that in real life would serve as company's representative area. 
-
-* Create, read, update and delete content as author
-* Create variety of designs through multiple Summernote fields
-* Manage drafts
-* Change placement, size and template of the content 
-
-![Digitalz Aden content-project](assets/readme_files/content-core-users-stories.JPG)
-
-
-**Fourth Phase**
-
-To make sure most relevant testing is performed, Fourth phase was to create and follow a list of testing and deployment tasks. 
-
-* User Stories testing
-* Manual testing
-* W3C HTML CSS, PEP8, JSHints, Lighthouse
-* TestCase automated
-* Security testing
-* Deployment to Heroku
-
-![Digitalz Aden testing-project](assets/readme_files/testing-deployment-tasks-project.JPG)
-
-
-
-#### Database Models
-
-The database models have been designed and managed using [PostgreSQL](https://www.postgresql.org/).
-
-1. **POST Model**
-
-* title = models.CharField()
-* slug = models.SlugField()
-* author = models.ForeignKey(User)
-* posted_by = models.TextField()
-* order = models.IntegerField(**defines the place in relation to other posts**)
-* featured_image = CloudinaryField()
-* excerpt = models.TextField()
-* updated_on = models.DateField()
-* content = models.TextField()
-* created_on = models.DateField()
-* status = models.IntegerField()
-* likes = models.ManyToManyField()
-
-
-2. **Comment Model**
-
-* post = models.ForeignKey(Post)
-* name = models.CharField()
-* email = models.EmailField()
-* body = models.TextField()
-* created_on = models.DateTimeField()
-* approved = models.BooleanField(default=False)
-
-
-3. **HeroContent Model**
-
-* hero_title = models.CharField()
-* slug = models.SlugField()
-* author = models.ForeignKey(User)
-* hero_featured_image = CloudinaryField()
-* image_alt_text = models.CharField(**text automatically placed in html to increase accessibility**)
-* hero_header = models.CharField(**summernote field that creates higher impact than title**)
-* text_background = models.IntegerField(**shade of grey to increase the header text visibility on light images**)
-* hero_excerpt = models.TextField()
-* images_on_desktop = models.IntegerField(**number of content cards user wants to see on 1 row on larger screens**)
-* image_height = models.IntegerField(**The height of image in px user wants for images on large screens**)
-* image_place = models.IntegerField(**defines image vs text relationship: image as background or on the side**)
-* image_order = models.IntegerField(**defines the place in relation to other Content cards**)
-* updated_on = models.DateTimeField()
-* hero_content = models.TextField(**another summernote field**)
-* created_on = models.DateTimeField()
-* status = models.IntegerField()
-
-!Many of the model's fields have a selection option:
-
-* STATUS = ((0, "Draft"), (1, "Published"))
-* IMAGECOUNTDESKTOP = ((12, "Whole Page"), (8, "2/3 of Page"),
-                     (6, "Half of Page"), (4, "1/3 of Page"),
-                     (3, "1/4 of Page"))
-* IMAGEHEIGHT = ((40, "400px"), (32, "320px"), (27, "270px"), (20, "220px"),
-               (16, "160px"), (8, "88px"), (5, "50px"))
-* IMAGEPLACE = ((1, "Image-as-background"), (2, "Image-on-side"))
-* TEXTBACKGROUND = ((1, "No background"), (2, "Put background"))
-
-
-4. **ContactMessage Model**
-
-* first_name = models.CharField()
-* last_name = models.CharField()
-* email = models.EmailField()
-* contact_message = models.TextField()
-* created_on = models.DateTimeField()
+Page | Mobile & Desktop Version 
+--- | --- | ---
+Home | ![Home wireframe image](/media/readme_files/aden-store-blsmq-home.png) | 
+Products | ![Products wireframe image](/media/readme_files/aden-store-blsmq-products.png) | 
+Product Details | ![Product details wireframe image](/media/readme_files/aden-store-blsmq-product-detail.png) | 
+Shopping Bag | ![Shopping bag wireframe image](/media/readme_files/aden-store-blsmq-shopping-bag.png) | 
+Checkout | ![Checkout wireframe image](/media/readme_files/aden-store-blsmq-checkout.png) | 
+Profile | ![Profile wireframe image](/media/readme_files/aden-store-blsmq-profile.png) | 
+Contact | ![Contact wireframe image](/media/readme_files/aden-store-blsmq-contact.png) | 
 
 
 
@@ -429,18 +336,57 @@ The database models have been designed and managed using [PostgreSQL](https://ww
 
 #### Color Scheme
 
-![Color scheme image](assets/readme_files/color-pallet.jpg)
+![Color scheme image](/media/readme_files/color-pallet.jpg)
 
-The colors used in the website respect the green-golden color-scheme of Aden Wellness, represented in the logo. 
+The colors used in the ecommerce website respect the green-golden color-scheme of Aden Wellness, represented in the logo. 
 
 Main colors in the application are achieved through images, so complementary slate-grey (#445261) and baby powder (#FFFFFD) were chosen just to create some contrast, improve readability and maintain consistent look. 
 
 
 #### Typography
 
-The main font being used in the site is Segoe UI with occasional introduction of Roboto, with sans-serif as a fallback in case Segoe UI doesn't get imported correctly. 
+The main font being used in the site is Roboto, with sans-serif as a fallback in case Roboto doesn't get imported correctly. 
 
-Segoe UI was chosen after refresher-research on fonts that are better for reading, however Segoe UI has proven to be font-of-choice for a few years in app development.
+Roboto was chosen after refresher-research on fonts that are better for reading and Roboto has proven to be font-of-choice for a few years in app development.
+
+
+
+## Marketing
+
+
+### Search Engine Optimisation
+
+To improve the search index rating on Google, research was carried out using a number of tools, such as [MOZ](https://moz.com/)  and [QuestionDB](https://questiondb.io) to search for relevant keywords to use in meta tags, alt-texts and content elements of the project.
+
+![MOZ keyword search](/media/readme_files/moz-kw-dashboard.JPG)
+![QuestionDB keyword search](/media/readme_files/questionDB-questions.JPG)
+
+A number of short and long tail keywords were then selected:
+
+* e-store
+* online store app
+* ecommerce platform for startups
+* free app for my business
+* ecommerce and engagement app 
+* build online business community 
+* online shop for small business
+* using Customer Engagement Platform for E-Commerce Success
+
+
+SEO steps taken in the projects to improve searchability
+
+1.	In header/nav use <strong>Span</strong> for Title and then use H1 for some important keywords and text later
+2.	Use <strong>H2</strong> to add another critical promo keyword information on the page
+3.	Use the <strong>Strong</strong> html element when including some exact & long-tail keywords to provide visual emphasis and search engines will understand their semantic value from this too.
+4.	Uses <strong>anker tags A</strong> for the internal or external links to insert keywords.
+5.	Always use keyword-rich, but still meaningfully describing picture <strong>ALT</strong> and image file name
+6.	Social network links must include the <strong>rel="noopener"</strong> attribute, which tells search engines not to include these links when it looks at our search engine ranking.  
+7.	Complete <strong>HEAD</strong> of each HTML files: the meta title, meta description & meta keywords being the most valuable  to search engines. 
+
+
+These keywords later will be continualy improved and refined and over time it should utlimately assist in the site ranking higher on Google.
+
+
 
 
 
