@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -119,18 +119,21 @@ WSGI_APPLICATION = 'aden_store.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+#if 'DATABASE_URL' in os.environ:
+#    DATABASES = {
+#        'default': dj_database_url.parse(os.environ.get('postgres://zafjfakvtronra:6e09143af04b69ae55cf75c044df2f7fd2146562cd35ad47282fe145537fac68@ec2-34-252-216-149.eu-west-1.compute.amazonaws.com:5432/df205dab2bqgfm'))
+#    }
+#else:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        }
+#    }
 
+DATABASES = {
+        'default': dj_database_url.parse('postgres://zafjfakvtronra:6e09143af04b69ae55cf75c044df2f7fd2146562cd35ad47282fe145537fac68@ec2-34-252-216-149.eu-west-1.compute.amazonaws.com:5432/df205dab2bqgfm')
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
