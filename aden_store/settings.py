@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['adenwell-commerce.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['adenwell-ecommerce.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -121,7 +121,7 @@ WSGI_APPLICATION = 'aden_store.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('postgres://zafjfakvtronra:6e09143af04b69ae55cf75c044df2f7fd2146562cd35ad47282fe145537fac68@ec2-34-252-216-149.eu-west-1.compute.amazonaws.com:5432/df205dab2bqgfm'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -130,7 +130,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
