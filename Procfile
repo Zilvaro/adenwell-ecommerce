@@ -1,0 +1,1 @@
+web: gunicorn aden_store.wsgi:application
