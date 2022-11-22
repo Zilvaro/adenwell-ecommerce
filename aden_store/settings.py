@@ -66,6 +66,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'aden_store.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+SUMMERNOTE_THEME = 'bs4'
 
 TEMPLATES = [
     {
