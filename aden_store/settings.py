@@ -40,12 +40,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
-    'adenapp',
     'products',
     'bag',
     'checkout',
     'profiles',
-    'content',
+    'adenapp',
 
     # Other
     'crispy_forms',
