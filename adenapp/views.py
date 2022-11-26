@@ -6,11 +6,6 @@ from django.urls import reverse_lazy
 from .models import HomeContent, HomeMedia
 
 
-def index(request):
-    """ A view to return the index page """
-    return render(request, 'adenapp/index.html')
-
-
 class HomeView(generic.TemplateView):
     """View to render the content, category links on the home page."""
 

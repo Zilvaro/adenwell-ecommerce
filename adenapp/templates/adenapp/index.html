@@ -5,6 +5,9 @@
 {% block brand_content %}
     
     {% for item in content %}
+      <div class="card">
+        <img src="{{ item.content_image.url }}" />
+      </div>
     {% endfor %}
 
     {% for media in homepage_media %}
