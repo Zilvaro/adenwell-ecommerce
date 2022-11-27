@@ -16,3 +16,20 @@ class HomeView(generic.TemplateView):
         context['content'] = HomeContent.objects.all()
         context['homepage_media'] = HomeMedia.objects.all()
         return context
+
+
+class ContentDetail(generic.DetailView):
+    """View to render the details of selected Content."""
+    def get(self, request, slug, *args, **kwargs):
+        queryset = HomeContent.objects.filter(status=1)
+
+        content = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            "adenapp/content_detail.html",
+            {
+               "content": content,
+            },
+        )
+

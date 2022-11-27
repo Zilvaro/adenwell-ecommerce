@@ -377,4 +377,8 @@ input[name='q']::placeholder {
     }
 }
   
+.hero-image {
+    width: 100%;
+    object-fit: cover;    
+}
   
