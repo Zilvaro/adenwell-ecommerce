@@ -116,6 +116,31 @@
 </div>
 
 
+
+<section id="categories-section" class="align-items-center d-flex">
+  <div class="container text-center">
+    <div class="row py-5">
+      <h1 class="logo-text">Your Wellness Vitamins and Aromas</h1>
+    </div>
+    <div class="row">
+      {% for media in homepage_media %}
+      <div class="col-md-6 col-lg-4 px-5 mb-5">
+        <a href="" class="text-decoration-none hvr-shrink">
+          <img class="img-fluid rounded-top" src="{{ media.media_image.url }}" alt="{{media_image_alt_text}}">
+          <h4 class="bg--light-blue c--white logo-text rounded-bottom py-1">{{media.media_text | safe }}  </h4>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <a href="" class="text-decoration-none hvr-sink mt-4"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 {% endblock %}
 
 

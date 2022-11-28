@@ -54,4 +54,4 @@ class HomeMedia(models.Model):
     media_text = models.TextField(blank=True)
 
     def __str__(self):
-        return self.name
+        return self.media_name

@@ -32,4 +32,3 @@ class ContentDetail(generic.DetailView):
                "content": content,
             },
         )
-
