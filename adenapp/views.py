@@ -20,7 +20,7 @@ class HomeView(generic.TemplateView):
 
 class ContentDetail(generic.DetailView):
     """View to render the details of selected Content."""
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, title, *args, **kwargs):
         queryset = HomeContent.objects.filter(status=1)
 
         content = get_object_or_404(queryset, slug=slug)
