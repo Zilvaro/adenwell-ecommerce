@@ -7,8 +7,6 @@ STATUS = ((0, "Draft"), (1, "Published"))
 IMAGEPLACE = ((1, "Image-as-background"), (2, "Image-on-side"))
 TEXTBACKGROUND = ((1, "No background"), (2, "Put background"))
 CAROUSEL = ((1, "First block"), (2, "Second block"), (3, "Third block"))
-MEDIAID = ((0, "Not used"), (1, "First image"),
-           (2, "Second image"), (3, "Third image"))
 
 
 class HomeContent(models.Model):
@@ -46,7 +44,7 @@ class HomeMedia(models.Model):
     """A model to generate and keep images and texts for use in click-menu
        visuals on the home page"""
     media_name = models.CharField(max_length=200, unique=True)
-    media_id = models.IntegerField(choices=MEDIAID, default=0)
+    media_id = models.IntegerField(default=0)
     media_image_url = models.URLField(max_length=1024, null=True, blank=True)
     media_image = models.ImageField(null=True, blank=True)
     media_image_alt_text = models.CharField(max_length=200,

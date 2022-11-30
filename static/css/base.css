@@ -280,6 +280,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .subheader-container {
+        padding-top: 120px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -347,10 +351,13 @@ input[name='q']::placeholder {
     justify-content: center;
 }
 .card img {
-    width: auto;
-    margin: auto;
-    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
 }
+
 .card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
@@ -377,10 +384,6 @@ input[name='q']::placeholder {
     }
 }
   
-.hero-image {
-    width: 100%;
-    object-fit: cover;    
-}
   
 
 /* product home-page links css */

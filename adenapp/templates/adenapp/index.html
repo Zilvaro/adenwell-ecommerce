@@ -5,106 +5,112 @@
 
 {% block brand_content %}
 
-<div class="container header-container">
+<div class="container subheader-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
 
-
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    {% for item in content %}
-    {% if item.carousel_block == 1 %}
     <div class="carousel-item active">
-      {% if item.image_order == 1 %}
+      <div class="cards-wrapper">
+      {% for item in content %}
+        {% if item.carousel_block == 1 %}
+          {% if item.image_order == 1 %}
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-8">
+                <img src="{{ item.content_image.url }}" style="height: 20vw" alt="{{ item.image_alt_text }}">
+              </div>
+              <div class="col-4">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% elif item.image.order == 2 %}
+          <div class="card d-none d-md-block">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          {% else %}
+          <div class="card d-none d-md-block">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>      
+          </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+    <div class="carousel-item">
       <div class="cards-wrapper">
         <div class="card">
-          <img src="{{ item.content_image.url }}" class="card-img-top" alt="...">
+          <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">{{ item.text | safe }}</p>
-            <a href="" class="btn btn-primary">About</a>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        {% elif item.image_order != 1 %}
         <div class="card d-none d-md-block">
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-      </div>
-      {% endif %}
-    </div>
-    {% endif %}
-    {% endfor %}
-
-
-
-    {% for item in content %}
-    {% if item.carousel_block == 2 %}
-    <div class="carousel-item active">
-      {% if item.image_order == 1 %}
-      <div class="cards-wrapper">
-        <div class="card">
-          <img src="{{ item.content_image.url }}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">About</a>
-          </div>
-        </div>
-        {% elif item.image_order != 1 %}
         <div class="card d-none d-md-block">
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
-      {% endif %}
     </div>
-    {% endif %}
-    {% endfor %}
-
-    {% for item in content %}
-    {% if item.carousel_block == 3 %}
-    <div class="carousel-item active">
-      {% if item.image_order == 1 %}
+    <div class="carousel-item">
       <div class="cards-wrapper">
         <div class="card">
-          <img src="{{ item.content_image.url }}" class="card-img-top" alt="...">
+          <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">About</a>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        {% elif item.image_order != 1 %}
         <div class="card d-none d-md-block">
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
-      {% endif %}
     </div>
-    {% endif %}
-    {% endfor %}
-
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -118,12 +124,25 @@
 
 
 
-<section id="categories-section" class="align-items-center d-flex">
-  <div class="container text-center">
-    <div class="row py-5">
-      <h1 class="logo-text">Your Wellness Vitamins and Aromas</h1>
+<section id="categories-section" class="align-items-center d-flex">  
+  <div class="container">
+    <div class="container-fluid mt-5 py-5">
+      <div class="row">
+        <div class="col-md-8 text-center">
+          <h1 class="display-5 logo-font text-black">
+            Your Wellness Vitamins and Aromas
+          </h1>
+        </div>
+        <div class="col-md-4 py-2 d-flex justify-content-center">
+          <h4>
+            <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+          </h4>
+        </div>
+      </div>      
     </div>
-    <div class="row">
+
+
+    <div class="row text-center">
       {% for media in homepage_media %}
       <div class="col-md-6 col-lg-4 px-5 mb-5">
         {% if media.media_id == 1 %}
@@ -176,6 +195,45 @@
   </div>
 </div>
 
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    {% for item in content %}
+    {% if item.carousel_block == 1 %}
+    <div class="carousel-item active">
+      {% if item.image_order == 1 %}
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="{{ item.content_image.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">{{ item.text | safe }}</p>
+            <a href="" class="btn btn-primary">About</a>
+          </div>
+        </div>
+        {% elif item.image_order != 1 %}
+        <div class="card d-none d-md-block">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
 
 
+
+
+
+
+
+
+
+
+    
 {% endblock %}
