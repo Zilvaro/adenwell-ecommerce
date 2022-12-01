@@ -161,6 +161,43 @@
     {% block content %}
     {% endblock %}
 
+
+    <!-- Footer -->
+    <footer class="footer container-fluid p-5 c--white bg--light-blue mt-auto">
+        <div class="row w-100 m-0">
+        <div class="col-md-4 px-0 py-4 px-md-4">
+            <h4 class="mb-3">NoPlast</h4>
+            <p>Copyright &copy; 2022. All rights reserved</p>
+            <a href="https://www.privacypolicygenerator.info/live.php?token=FhOWAmrlo0e3HzFuqw9vc5UvCn0Y3ewA" 
+            target="_blank" rel="noopener" class="link-light">Privacy Policy</a>
+        </div>
+
+        <div class="col-md-4 px-0 py-4 px-md-4">
+            <h5 class="mb-3 text-uppercase">Social</h5>
+            <p>Follow us on Facebook</p>
+            <a href="https://www.facebook.com/NoPlast-107480112033116" target="_blank" 
+            rel="nofollow"><i class="fab fa-facebook-square link-light icon"></i></a>
+        </div>
+
+        <div class="col-md-4 px-0 py-4 px-md-4">
+            <h5 class="mb-3 text-uppercase">Be a friend!</h5>
+            <p>Join our newsletter and get inspired about sustainable products and living.</p>
+            <form method="POST" action="" id="newsletter-form" class="text-muted form mb-5"
+            enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ subscribe_form | crispy }}
+            <div class="mt-3">
+                <button class="btn btn-main hvr-back-pulse" type="submit">Subscribe!</button>
+            </div>
+            </form>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');

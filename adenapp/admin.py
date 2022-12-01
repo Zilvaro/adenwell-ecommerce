@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomeContent, HomeMedia
+from .models import HomeContent, HomeMedia, SiteDocs 
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -19,3 +19,11 @@ class MediaAdmin(SummernoteModelAdmin):
     list_display = ('media_name', 'media_id',)
     search_fields = ['media_name']
     summernote_fields = ('media_text',)
+
+
+@admin.register(SiteDocs)
+class MediaAdmin(SummernoteModelAdmin):
+
+    list_display = ('doc_name', 'doc_id',)
+    search_fields = ['doc_name']
+    summernote_fields = ('doc_text',)

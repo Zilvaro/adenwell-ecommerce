@@ -31,11 +31,6 @@ class HomeContent(models.Model):
     class Meta:
         ordering = ["image_order"]
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
-
     def __str__(self):
         return self.title
 
@@ -56,3 +51,13 @@ class HomeMedia(models.Model):
 
     def __str__(self):
         return self.media_name
+
+
+class SiteDocs(models.Model):
+    """A model to generate and keep documents that can be used in the app"""
+    doc_name = models.CharField(max_length=200, unique=True)
+    doc_id = models.IntegerField(default=0)
+    doc_text = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.doc_name

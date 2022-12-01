@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.messages.views import SuccessMessageMixin, messages
 from django.urls import reverse_lazy
-from .models import HomeContent, HomeMedia
+from .models import HomeContent, HomeMedia, SiteDocs
 
 
 class HomeView(generic.TemplateView):
@@ -30,5 +30,22 @@ class HomeContentDetail(generic.DetailView):
             "adenapp/content_detail.html",
             {
                "content": content,
+            },
+        )
+
+
+class DocsView(generic.DetailView):
+    """View to render the document content upon request."""
+
+    def get(self, request, doc_id, *args, **kwargs):
+        queryset = SiteDocs().objects.filter(status=1)
+
+        document = get_object_or_404(queryset, doc_id=doc_id)
+
+        return render(
+            request,
+            "adenapp/document_detail.html",
+            {
+               "document": document,
             },
         )
