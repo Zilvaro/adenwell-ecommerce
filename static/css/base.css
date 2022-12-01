@@ -180,7 +180,7 @@ input[name='q']::placeholder {
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
-    max-width: 80%;
+    max-width: 98%;
   }
 }
 
@@ -281,15 +281,22 @@ input[name='q']::placeholder {
         padding-top: 164px;
     }
 
-    .subheader-container {
+    .spacefiller-container {
         padding-top: 120px;
     }
 }
+
+
+    }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
+    }
+
+    .spacefiller-container {
+        padding-top: 120px;
     }
 
     body {
@@ -340,10 +347,6 @@ input[name='q']::placeholder {
     .carouseladen {
       max-width: 98%;
     }
-}
-
-.content-container {
-    padding-top: 164px;
 }
 
 .cards-wrapper {

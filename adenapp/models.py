@@ -6,7 +6,6 @@ from django.urls import reverse
 STATUS = ((0, "Draft"), (1, "Published"))
 IMAGEPLACE = ((1, "Image-as-background"), (2, "Image-on-side"))
 IMAGEORDER = ((1, "First/only"), (2, "Second"), (3, "Third"))
-TEXTBACKGROUND = ((1, "No background"), (2, "Put background"))
 CAROUSEL = ((1, "First block"), (2, "Second block"), (3, "Third block"))
 
 
@@ -21,9 +20,7 @@ class HomeContent(models.Model):
     content_image_url = models.URLField(max_length=1024, null=True, blank=True)
     content_image = models.ImageField(null=True, blank=True)
     image_alt_text = models.CharField(max_length=200, blank=True,
-                                      default='aden wellness theme image')    
-    text_background = models.IntegerField(choices=TEXTBACKGROUND,
-                                          default=1)    
+                                      default='aden wellness theme image')        
     carousel_block = models.IntegerField(choices=CAROUSEL, default=1)
     image_order = models.IntegerField(choices=IMAGEORDER, default=1)
     updated_on = models.DateTimeField(auto_now=True)
@@ -33,6 +30,11 @@ class HomeContent(models.Model):
 
     class Meta:
         ordering = ["image_order"]
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title

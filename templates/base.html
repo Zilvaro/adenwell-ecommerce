@@ -134,15 +134,6 @@
 -->
     </header>
 
-
-    
-
-    
-
-
-    {% block brand_content %}
-    {% endblock %}
-
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -164,7 +155,8 @@
     {% block page_header %}
     {% endblock %}
 
-
+    {% block brand_content %}
+    {% endblock %}
 
     {% block content %}
     {% endblock %}
