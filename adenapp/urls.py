@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path("", views.HomeView.as_view(), name='home'),
     path('more/<slug:slug>/', views.HomeContentDetail.as_view(), name='content_detail'),
-    path('<int:doc_id>/', views.DocsView.as_view(), name='document_detail'),
+    path('privacy/', views.view_privacy_policy, name='privacy_policy'),
 ]

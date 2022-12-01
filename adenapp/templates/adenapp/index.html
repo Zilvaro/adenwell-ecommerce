@@ -3,7 +3,7 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container spacefiller-container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -60,7 +60,8 @@
             <div class="card-body">
               <h5 class="card-title">{{item.header | safe}}</h5>
               <p class="card-text">{{item.excerpt | safe}}</p>
-              <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">{{item.button_text}}</a>
+              <a href="https://www.amazon.com/vdp/0a7e69cb9caa4ca3add455019800a216?ref=dp_vse_ibvc0" 
+                      target="_blank" class="btn btn-primary">{{item.button_text}}</a>              
             </div>
           </div>
           {% elif item.image.order == 2 %}

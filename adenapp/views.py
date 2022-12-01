@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.messages.views import SuccessMessageMixin, messages
 from django.urls import reverse_lazy
-from .models import HomeContent, HomeMedia, SiteDocs
+from .models import HomeContent, HomeMedia
 
 
 class HomeView(generic.TemplateView):
@@ -34,18 +34,7 @@ class HomeContentDetail(generic.DetailView):
         )
 
 
-class DocsView(generic.DetailView):
-    """View to render the document content upon request."""
+def view_privacy_policy(request):
+    """ A view that renders the bag contents page """
 
-    def get(self, request, doc_id, *args, **kwargs):
-        queryset = SiteDocs().objects.filter(status=1)
-
-        document = get_object_or_404(queryset, doc_id=doc_id)
-
-        return render(
-            request,
-            "adenapp/document_detail.html",
-            {
-               "document": document,
-            },
-        )
+    return render(request, 'adenapp/privacy_policy.html')

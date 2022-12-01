@@ -51,13 +51,3 @@ class HomeMedia(models.Model):
 
     def __str__(self):
         return self.media_name
-
-
-class SiteDocs(models.Model):
-    """A model to generate and keep documents that can be used in the app"""
-    doc_name = models.CharField(max_length=200, unique=True)
-    doc_id = models.IntegerField(default=0)
-    doc_text = models.TextField(blank=True)
-
-    def __str__(self):
-        return self.doc_name
