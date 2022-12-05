@@ -29,20 +29,20 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #445261;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #445261;
     color: white;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: #445261 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #445261;
 }
 
 .btn-outline-black:hover,
@@ -50,6 +50,10 @@ body {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
+}
+
+.grey-icon {
+    color: #445261 
 }
 
 .shop-now-button:hover,
@@ -67,11 +71,11 @@ body {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #445261 !important;
 }
 
 .bg-black {
-    background: #000 !important;
+    background: #445261 !important;
 }
 
 .overlay {
@@ -192,7 +196,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #445261;
     border-radius: 0;
 }
 
@@ -278,7 +282,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 100px;
     }
 
     .spacefiller-container {

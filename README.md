@@ -370,7 +370,10 @@ A number of short and long tail keywords were then selected:
 * ecommerce and engagement app 
 * build online business community 
 * online shop for small business
-* using Customer Engagement Platform for E-Commerce Success
+* healthy supplements
+* hygge
+* aromatic oils for home
+* wellness
 
 
 SEO steps taken in the projects to improve searchability

@@ -3,13 +3,7 @@
 
 
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
+
 
 {% block top_text_banner %}
     <div>{% include 'includes/delivery-banner.html' %}</div>
@@ -19,7 +13,17 @@
     <div>{% include 'includes/products-nav.html' %}</div>
 {% endblock %}
 
+
+
 {% block content %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
     <div class="overlay"></div>
     <div class="container-fluid">

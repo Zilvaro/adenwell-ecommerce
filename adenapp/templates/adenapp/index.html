@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block brand_content %}
-
+<!-- Content section -->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -24,7 +24,7 @@
             <div class="card-body">
               <h5 class="card-title">{{item.header | safe}}</h5>
               <p class="card-text">{{item.excerpt | safe}}</p>
-              <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">{{item.button_text}}</a>
+              <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">{{ item.button_text }}</a>
             </div>
           </div>
           {% elif item.image.order == 2 %}
@@ -33,7 +33,7 @@
             <div class="card-body">
               <h5 class="card-title">{{item.header | safe}}</h5>
               <p class="card-text">{{item.excerpt | safe}}</p>
-              <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">{{item.button_text}}</a>
+              <a href="{% url 'content_detail' item.slug %}" class="btn btn-primary">{{ item.button_text }}</a>
             </div>
           </div>
           {% else %}
@@ -134,6 +134,7 @@
   </a>
 </div>
 
+<!-- Categories section -->
 <section id="categories-section" class="align-items-center d-flex">  
   <div class="container">
     <div class="container-fluid mt-5 py-5">
@@ -150,7 +151,7 @@
         </div>
       </div>      
     </div>
-
+    
     <div class="row text-center">
       {% for media in homepage_media %}
       <div class="col-md-6 col-lg-4 px-5 mb-5">
@@ -184,7 +185,7 @@
 <!-- Displaying a static image of the company values -->
 <div class="image-container">
   <img class="card-img-top"
-      src="https://res.cloudinary.com/zilvacloud/image/upload/v1662905005/our_wellness_approach_green_c5yoep.jpg" alt="image with company values">
+      src="https://res.cloudinary.com/zilvacloud/image/upload/v1662905005/our_wellness_approach_green_c5yoep.jpg" alt="Aden Wellness company values">
 </div>
   
 {% endblock %}
