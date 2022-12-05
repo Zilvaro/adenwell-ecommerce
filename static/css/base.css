@@ -34,6 +34,10 @@ body {
     min-width: 260px;
 }
 
+.btn-car {
+    color: #3a9494 !important;
+}
+
 .btn-black {
     background: #445261;
     color: white;
@@ -488,3 +492,4 @@ input[name='q']::placeholder {
 .icon {
     font-size: 1.7rem;
 }
+ 
