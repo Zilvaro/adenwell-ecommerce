@@ -51,3 +51,21 @@ class HomeMedia(models.Model):
 
     def __str__(self):
         return self.media_name
+
+
+class ContactMessage(models.Model):
+    """Model to record the Content message"""
+    first_name = models.CharField(max_length=80)
+    last_name = models.CharField(max_length=80)
+    email = models.EmailField()
+    contact_message = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return self.email
+
+    def get_absolute_url(self):
+        return reverse('home',)

@@ -3,7 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.messages.views import SuccessMessageMixin, messages
 from django.urls import reverse_lazy
-from .models import HomeContent, HomeMedia
+from .models import HomeContent, HomeMedia, ContactMessage
+from .forms import ContactForm
 
 
 class HomeView(generic.TemplateView):
@@ -38,3 +39,24 @@ def view_privacy_policy(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'adenapp/privacy_policy.html')
+
+
+def contact(request):
+    """Renders the contact template."""
+    if request.method == 'POST':
+        first_name = request.POST['']
+        last_name = models.CharField(max_length=80)
+        email = models.EmailField()
+        contact_message = models.TextField()
+        created_on = models.DateTimeField(auto_now_add=True)
+
+    return render(request, 'adenapp/contact_form.html', {})
+
+
+class ContactView(SuccessMessageMixin, generic.CreateView):
+    """The view to render the contact form for the registered user to leave
+       a message to the admin."""
+    model = ContactMessage
+    template_name = 'adenapp/contact_form.html'
+    fields = ('first_name', 'last_name', 'email', 'contact_message')
+    success_message = "Thank You for your message!"

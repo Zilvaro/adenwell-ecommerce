@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomeContent, HomeMedia
+from .models import HomeContent, HomeMedia, ContactMessage
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -21,3 +21,8 @@ class MediaAdmin(SummernoteModelAdmin):
     summernote_fields = ('media_text',)
 
 
+@admin.register(ContactMessage)
+class ContactsAdmin(SummernoteModelAdmin):
+
+    list_display = ('first_name', 'last_name', 'email', 'contact_message')
+    search_fields = ['first_name', 'last_name', 'email']

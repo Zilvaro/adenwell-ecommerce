@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Contact message form  -->
+<div class="contact-background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2 ">
+        <h3>{% trans "Get in touch..." %}</h3>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+        {% if messages %}
+            {% for message in messages %}
+            <div class="text-center alert alert-{{ message.tags }}">
+                {{ message|safe }}
+            </div>
+            {% endfor %}
+            {% else %}
+        <form method="post" style="margin-top: 1.3em;">
+          <table>
+            {{ contact_form | crispy }}
+            {% csrf_token %}
+            {{ form.as_table }}
+          </table>
+          <br>
+          <button type="submit" class="btn btn-signup">Submit</button>
+          <hr>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+  <br>
+
+  {% endblock %}
