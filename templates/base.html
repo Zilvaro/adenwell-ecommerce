@@ -21,18 +21,18 @@
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-     <!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
-     <!-- External base.css file -->
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- External base.css file -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
-     <!-- Font Awesome -->
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/1b552ab9b4.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -58,14 +58,16 @@
 
 <body>
     <!-- Header -->
-    <header class="container-fluid fixed-top"> 
+    <header class="container-fluid fixed-top">
         {% block top_text_banner %}
-        {% endblock %}       
+        {% endblock %}
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <!-- Logo -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <a class="navbar-brand" href="{% url 'home' %}"><img src="https://res.cloudinary.com/zilvacloud/image/upload/v1660216640/aden-logo-no-background_yapu1c.png" style="width:200px" alt="logo with bird image and Aden Wellness title"></a>
+                    <a class="navbar-brand" href="{% url 'home' %}"><img
+                            src="https://res.cloudinary.com/zilvacloud/image/upload/v1660216640/aden-logo-no-background_yapu1c.png"
+                            style="width:200px" alt="logo with bird image and Aden Wellness title"></a>
                 </a>
             </div>
             <!-- Search bar-->
@@ -127,7 +129,7 @@
             </div>
         </div>
         {% block products_nav %}
-        {% endblock %}        
+        {% endblock %}
     </header>
 
     <!-- Toasts / messages -->
@@ -162,37 +164,28 @@
     <!-- Footer -->
     <footer class="footer container-fluid p-5 c--white bg--light-blue mt-auto">
         <div class="row w-100 m-0">
-        <div class="col-md-4 px-0 py-4 px-md-4">
-            <h4 class="mb-3">Aden Wellness</h4>
-            <p>Copyright &copy; 2022. All rights reserved</p>
-            
-            <a href="{% url 'privacy_policy' %}" 
-            class="link-light">Privacy Policy</a>
-        </div>
+            <div class="col-md-4 px-0 py-4 px-md-4">
+                <h4 class="mb-3">Aden Wellness</h4>
+                <p>Copyright &copy; 2022. All rights reserved</p>
 
-        <div class="col-md-4 px-0 py-4 px-md-4">
-            <h5 class="mb-3 text-uppercase">Social</h5>
-            <p>Follow us on Facebook</p>
-            <a href="https://res.cloudinary.com/zilvacloud/image/upload/v1670249407/facebook-balsamique_fggzl9.png" target="_blank" 
-            rel="nofollow"><i class="fab fa-facebook-square link-light icon"></i></a>
-        </div>
-
-        <div class="col-md-4 px-0 py-4 px-md-4">
-            <h5 class="mb-3 text-uppercase">Be a friend!</h5>
-            <p>Join our newsletter and get inspired about healthy living.</p>
-            <h3>
-                <a class="nav-link" href="{% url 'contact_form' %}">Contact</a>
-                <a href="{% url 'contact_form' %}" class="shop-now-button btn btn-main rounded-0 text-uppercase py-3">Shop Now</a>
-            </h3>
-            <form method="POST" action="{% url 'contact_form' %}" id="contact-form" class="text-muted form mb-5"
-            enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ contact_form | crispy }}
-            <div class="mt-3">
-                <button class="btn btn-main hvr-back-pulse" type="submit">Subscribe!</button>
+                <a href="{% url 'privacy_policy' %}" class="link-light">Privacy Policy</a>
             </div>
-            </form>
-        </div>
+
+            <div class="col-md-4 px-0 py-4 px-md-4">
+                <h5 class="mb-3 text-uppercase">Social</h5>
+                <p>Follow us on Facebook</p>
+                <a href="https://res.cloudinary.com/zilvacloud/image/upload/v1670249407/facebook-balsamique_fggzl9.png"
+                    target="_blank" rel="nofollow"><i class="fab fa-facebook-square link-light icon"></i></a>
+            </div>
+
+            <div class="col-md-4 px-0 py-4 px-md-4">
+                <h5 class="mb-3 text-uppercase">Get in touch</h5>
+                <p>Ask us a question or share your opinion.</p>
+                <div class="mt-3">
+                    <a href="{% url 'contact_form' %}">
+                        <button class="btn btn-main hvr-back-pulse" type="submit">Contact us</button></a>
+                </div>                
+            </div>
         </div>
     </footer>
 

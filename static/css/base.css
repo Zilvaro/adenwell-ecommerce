@@ -295,7 +295,6 @@ input[name='q']::placeholder {
 }
 
 
-    }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -440,6 +439,8 @@ input[name='q']::placeholder {
     border-color: #09abd7 !important;
 }
 
+
+
 /* Buttons, links and icons */
 
 .link-dark {
@@ -492,4 +493,8 @@ input[name='q']::placeholder {
 .icon {
     font-size: 1.7rem;
 }
- 
+
+.white-text {
+    color: #f4f6fc !important;
+    text-decoration: none;
+}
