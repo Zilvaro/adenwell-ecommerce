@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Dissalow: /profiles/
+Disallow: /bag/
+Sitemap: https://adenwell-ecommerce.herokuapp.com/sitemap.xml
