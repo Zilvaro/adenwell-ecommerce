@@ -290,7 +290,7 @@ input[name='q']::placeholder {
     }
 
     .spacefiller-container {
-        padding-top: 120px;
+        padding-top: 0px;
     }
 }
 
@@ -299,11 +299,9 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 45px;
     }
 
-    .spacefiller-container {
-        padding-top: 120px;
     }
 
     body {
@@ -345,7 +343,7 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .01rem .1rem !important;
     }
-}
+
 
 /* content carrousel css */
 
@@ -497,4 +495,9 @@ input[name='q']::placeholder {
 .white-text {
     color: #f4f6fc !important;
     text-decoration: none;
+}
+
+.textarea {
+    /* width: almost fit-content; */
+    width: 99%;
 }

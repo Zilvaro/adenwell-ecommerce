@@ -2,6 +2,12 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
+{% block products_nav %}
+    <div>{% include 'includes/products-nav.html' %}</div>
+{% endblock %}
+
+
+{% block content %}
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -10,7 +16,6 @@
     </div>
 {% endblock %}
 
-{% block content %}
 <!-- Contact message form  -->
 <div class="white-text contact-background">
   <div class="container">
