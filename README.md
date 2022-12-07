@@ -310,7 +310,7 @@ The website has been organized in a Hierarchical Tree Structure to ensure the si
 
 #### Database Model
 
-The database model has been designed using [lucidapp](https://lucid.app/). The type of database being used for the is relational database being managed using SQLite3 during development and deployed using [PostgreSQL](https://www.postgresql.org/).
+The database model has been designed using [lucidapp](https://lucid.app/). The type of database being used for the is relational database being managed using SQLite3 during development and deployed using [ElephantSQL](https://www.elephantsql.com/).
 
 ![AdenWell E-commerce Database Model](/media/readme_files/database-model.png)
 
@@ -340,7 +340,7 @@ Contact | ![Contact wireframe image](/media/readme_files/aden-store-blsmq-contac
 
 The colors used in the ecommerce website respect the green-golden color-scheme of Aden Wellness, represented in the logo. 
 
-Main colors in the application are achieved through images, so complementary slate-grey (#445261) and baby powder (#FFFFFD) were chosen just to create some contrast, improve readability and maintain consistent look. 
+Main colors in the application are achieved through images, so complementary slate-grey (#445261), navy-blue (#055772) and baby powder (#FFFFFD) were chosen just to create some contrast, improve readability and maintain consistent look. 
 
 
 #### Typography
@@ -381,10 +381,8 @@ SEO steps taken in the projects to improve searchability
 1.	In header/nav use <strong>Span</strong> for Title and then use H1 for some important keywords and text later
 2.	Use <strong>H2</strong> to add another critical promo keyword information on the page
 3.	Use the <strong>Strong</strong> html element when including some exact & long-tail keywords to provide visual emphasis and search engines will understand their semantic value from this too.
-4.	Uses <strong>anker tags A</strong> for the internal or external links to insert keywords.
-5.	Always use keyword-rich, but still meaningfully describing picture <strong>ALT</strong> and image file name
-6.	Social network links must include the <strong>rel="noopener"</strong> attribute, which tells search engines not to include these links when it looks at our search engine ranking.  
-7.	Complete <strong>HEAD</strong> of each HTML files: the meta title, meta description & meta keywords being the most valuable  to search engines. 
+4.	Always use keyword-rich, but still meaningfully describing picture <strong>ALT</strong> and image file name
+5.	Social network links must include the <strong>rel="noopener"</strong> attribute, which tells search engines not to include these links when it looks at our search engine ranking.
 
 
 These keywords later will be continualy improved and refined and over time it should utlimately assist in the site ranking higher on Google.
