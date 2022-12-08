@@ -10,10 +10,10 @@ Therefore, the app has 2 distinctive parts:
 1.	Top part is the content selection of more permanent materials that are managed by the company (admin, UserAdmins)
 2.	The e-commerce part where Aden Wellness can display products, collect orders and process payments  
 
-The working version of the AdenWell e-commerce app can be found [here](https://digitalz-adenwell.herokuapp.com)
+The working version of the AdenWell e-commerce app can be found [here](https://adenwell-ecommerce.herokuapp.com/)
 
 
-![website preview](/assets/readme_files/am-i-responsive-black.JPG)
+![website preview](/media/readme_files/am-i-responsive-black.JPG)
 
 
 
@@ -43,8 +43,24 @@ The working version of the AdenWell e-commerce app can be found [here](https://d
       - [Typography](#typography)
   - [Marketing](#marketing)
     - [Search Engine Optimisation](#search-engine-optimisation)
+    - [FaceBook business page (mock-up)](#facebook-business-page-mock-up)
   - [Features - Finished Product](#features---finished-product)
     - [General](#general)
+      - [Header](#header)
+      - [Footer](#footer)
+    - [Home Page](#home-page)
+      - [Content Section](#content-section)
+      - [Categories Section](#categories-section)
+    - [Products Page](#products-page)
+    - [Product Details Page](#product-details-page)
+    - [Products Admin](#products-admin)
+      - [Add/Edit Product](#addedit-product)
+    - [Shopping Bag Page](#shopping-bag-page)
+    - [Checkout \& Success Payment Page](#checkout--success-payment-page)
+    - [Profile Page](#profile-page)
+    - [Contact Page](#contact-page)
+    - [Accounts Pages](#accounts-pages)
+    - [404 Error Page](#404-error-page)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Libraries and Frameworks](#libraries-and-frameworks)
@@ -55,7 +71,6 @@ The working version of the AdenWell e-commerce app can be found [here](https://d
     - [Major Errors \& Learnings](#major-errors--learnings)
   - [Deployment](#deployment)
     - [Deploying on Heroku](#deploying-on-heroku)
-  - [Finished Product](#finished-product)
   - [Credits](#credits)
     - [Content](#content)
     - [Code](#code)
@@ -190,7 +205,7 @@ According to the strategy table, not all features can be implemented in the firs
 
 * Responsive design
 
-* Create, edit and delete products
+* Create, edit and delete products (CRUD)
 
 * Account registration
 
@@ -213,7 +228,7 @@ According to the strategy table, not all features can be implemented in the firs
 
 **Second Phase**
   
-* Content display & CRUD
+* Content display
 
 * Rate products
 
@@ -225,9 +240,9 @@ According to the strategy table, not all features can be implemented in the firs
 
 **Third Phase**
 
-* Car Payment
+* Card Payment
 
-* Manage products and content in PosgreSQL
+* Manage products and content in PosgreSQL (ElephantSQL)
 
 * Additional payment options
 
@@ -388,6 +403,11 @@ SEO steps taken in the projects to improve searchability
 These keywords later will be continualy improved and refined and over time it should utlimately assist in the site ranking higher on Google.
 
 
+### FaceBook business page (mock-up)
+
+As a real FB page has been in a build-process, the mock-up version was used for this project:
+
+![Facebook mock-up page](/media/readme_files/facebook-balsamique.png)
 
 
 
@@ -399,30 +419,165 @@ These keywords later will be continualy improved and refined and over time it sh
 * The website has been designed from a mobile first perspective.
 
 * Responsive design across all device sizes.
+  
 
-* Navigation Bar
-![Digitalz Aden Navigation Bar image](assets/readme_files/nav-bar.JPG)
+####  Header 
+![Adenwell header structure](/media/readme_files/header-1.JPG)
+![Adenwell header product pages](/media/readme_files/header-2.JPG)
 
-    *  Contains the main logo, links and Welcome! with user name.
+* The header contains the main logo, navigation links and search product functionality.
+
+* The main logo works as a link to the home page.
+
+* The search bar allows the user to search the website for products using specific keywords.
+
+* The search can is hidden at first for better visuals and can be toggled using the search icon link in case the shopper needs.
+
+* The navigation links allow the shopper access to all sections to facilitate navigation across the website. It also has a hover effect that changes color to provide feedback to the shopper for a better user experience.
+
+* The delivery-fee information is only on product related pages
 
 
-* Footer
-  ![Digitalz Aden Footer image](assets/readme_files/footer-bar.JPG)
 
-    * The footer includes a logo and link to social media channels (hidden while waiting for Aden Wellness approval to use).
+#### Footer
+![Adenwell footer](/media/readme_files/footer.JPG)
+
+* The footer contains business information as well as links to our Facebook page and privacy policy.
+
+* It has an invitation and a link to leave a comment, suggestion or ask a question
+
+* A newsletter registration form has been located at the footer allowing the user to subscribe to healthy news from every page of the app.
 
 
-Page | Desktop | Mobile |
+### Home Page
+
+
+#### Content Section
+![Adenwell home page](/media/readme_files/home-page.JPG)
+
+* Provide relevant information, promo offer, brand messages to the shopper looking to learn more about our business.
+
+
+
+#### Categories Section
+![Adenwell home page-categories](/media/readme_files/product-links.JPG)
+
+* Display to the shopper the product categories available, providing a link to each category.
+
+
+### Products Page
+![Adenwell product page](/media/readme_files/product-page.JPG)
+
+* Display all the products currently available or filtered on a specific category.
+
+* Display an image of the products as well as their main information such as name, price and rating.
+
+* Provides a product navigation bar to allow the shopper to filter products per category
+
+* Provides sorting functionality to sort products by price, rating, name or category.
+
+* A back to the top button is available so the shopper can easily come back to the top of the page.
+
+* Links to edit and remove are available for each product.
+
+
+### Product Details Page
+![Adenwell product-details](/media/readme_files/product-detail.JPG)
+
+* The products navigation bar is present in case the shopper wants to go back to the products.
+
+* Provide a larger image of the product and display its detailed information
+
+* Allow the user to select the quantity of products to be added to the shopping bag.
+
+* Provide a "Keep Shopping" button to go back to the products.
+
+* An "Add to Bag" button is available to add the desired quantity of the product to the shopping bag.
+
+* A reviews link is available, indicating how many reviews the product has received and to toggle the reviews. 
+
+* Sort functionality allows the shopper to sort the products either by date created or rating.
+
+* A link to leave a review is available at the bottom of the reviews.
+
+* Provide edit and delete link for the logged in shopper's own reviews.
+
+
+### Products Admin
+
+#### Add/Edit Product
+![Adenwell product management CRUD](/media/readme_files/product-management.JPG)
+
+* Provide a form for the site admin to be able to add new products to the store or
+* Provide a prefilled form for the site admin to be able to update products in the store.
+
+
+### Shopping Bag Page
+![Adenwell shopping bag](/media/readme_files/shoping-bag.JPG)
+
+
+* A message alerts the user in case the free delivery threshold has not been reached, displaying the amount left.
+
+* Display all products currently on the shopping bag and their information.
+
+* Allow the user to update the product quantity or remove the product from the shopping bag.
+
+* Display the current total cost including the bag total and delivery costs.
+
+* Provide a "Keep Shopping" button to go back to the products.
+
+* A button to checkout is provided for the shopper to finish the purchase.
+
+
+### Checkout & Success Payment Page
+![Adenwell checkout](/media/readme_files/checkout.JPG)
+![Adenwell completed order](/media/readme_files/completed-order.JPG)
+
+* Provide a checkout form for the shopper to complete the purchase and provide the necessary contact, shipping and payment information.
+
+* Display an order summary listing all the products to be purchased and their total cost including the bag total and delivery costs.
+
+* Provide a link back to the shopping bag in the case the shopper would like to adjust the products in the shopping bag.
+
+* A message is displayed, informing the shopper the amount to be charged on the provided card.
+
+* Descriptive error messages are displayed in case there is any issue with the payment information provided.
+
+* Display thepayment is complete and the order confirmation email has been sent to the email address provided.
+
+
+### Profile Page
+![Adenwell profile](/media/readme_files/profile.JPG)
+
+* Provide a form for the registered shopper to update their default information.
+
+* An order history section is present with all registered shopper's past orders information.
+
+
+### Contact Page
+![Adenwell contact](/media/readme_files/contact-page.JPG)
+
+* Displays the form for the user to write a comment or ask a question.
+
+
+### Accounts Pages
+
+Page | Purpose | Image |
 --- | --- | --- |
-| Home | ![Desktop Home Page image](assets/readme_files/home-desktop.jpg) | ![Mobile Home Page image ](assets/readme_files/home-mobile.jpg) |
-| Content | ![Desktop Content Page image](assets/readme_files/content-desktop.JPG) | ![Mobile Content Page image](assets/readme_files/content-mobile.jpg) |
-| Post | ![Desktop Post Page image](assets/readme_files/post-desktop.jpg) | ![Mobile Post Page image](assets/readme_files/post-mobile.jpg) |
-| Contact |![Desktop Contact Page image](assets/readme_files/contact-desktop.JPG) | ![Mobile Contact Page image](assets/readme_files/contact-mobile.JPG) |
-| Register |![Desktop Register Page image](assets/readme_files/register-desktop.JPG) | ![Mobile Register Page image](assets/readme_files/register-mobile.JPG) |
-| Log-in |![Desktop Log-in Page image](assets/readme_files/login-desktop.JPG) | ![Mobile Log-in Page image](assets/readme_files/login-mobile.JPG) |
-| Log-out | ![Desktop Log-out Page image](assets/readme_files/logout-mobile.JPG) | ![Mobile Log-out Page image](assets/readme_files/logout-mobile.JPG) |
+Sign Up | Allow the shopper to sign up an account for the website. | ![Adenwell contact](/media/readme_files/sign-up.JPG) |
+Sign In | Allow the registered shopper to sign in with their account. | ![Adenwell contact](/media/readme_files/sign-in.JPG) |
+Sign Out | Allow the registered shopper to sign out from their account. | ![Adenwell contact](/media/readme_files/sign-out.JPG) |
 
 
+### 404 Error Page
+![Adenwell 404 error page image](/media/readme_files/404-message.JPG)
+
+* Provided information to the shopper in case the address entered cannot be found.
+
+* A link to come back to the products is present.
+
+
+[Back to top ⇧](#table-of-contents)
 
 
 ## Technologies Used
@@ -614,20 +769,6 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
         - web: gunicorn project-name.wsgi
     - Go to Deploy tab on Heroku and connect to the GitHub, then to the required repository.
     Click on Deploy Branch and wait for the build to load. When the build is complete, the app can be opened through Heroku.
-
-
-## Finished Product
-[Go to the top](#table-of-contents)
-
-Page | Desktop | Mobile |
---- | --- | --- |
-| Home | ![Desktop Home Page image](assets/readme_files/home-desktop.jpg) | ![Mobile Home Page image ](assets/readme_files/home-mobile.jpg) |
-| Content | ![Desktop Content Page image](assets/readme_files/content-desktop.JPG) | ![Mobile Content Page image](assets/readme_files/content-mobile.jpg) |
-| Post | ![Desktop Post Page image](assets/readme_files/post-desktop.jpg) | ![Mobile Post Page image](assets/readme_files/post-mobile.jpg) |
-| Contact |![Desktop Contact Page image](assets/readme_files/contact-desktop.JPG) | ![Mobile Contact Page image](assets/readme_files/contact-mobile.JPG) |
-| Register |![Desktop Register Page image](assets/readme_files/register-desktop.JPG) | ![Mobile Register Page image](assets/readme_files/register-mobile.JPG) |
-| Log-in |![Desktop Log-in Page image](assets/readme_files/login-desktop.JPG) | ![Mobile Log-in Page image](assets/readme_files/login-mobile.JPG) |
-| Log-out | ![Desktop Log-out Page image](assets/readme_files/logout-mobile.JPG) | ![Mobile Log-out Page image](assets/readme_files/logout-mobile.JPG) |
 
 
 
