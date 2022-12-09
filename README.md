@@ -70,12 +70,18 @@ The working version of the AdenWell e-commerce app can be found [here](https://a
     - [Cloud Storage](#cloud-storage)
     - [Tools and Programs](#tools-and-programs)
   - [Testing](#testing)
-    - [Major Errors \& Learnings](#major-errors--learnings)
   - [Deployment](#deployment)
-    - [Deploying on Heroku](#deploying-on-heroku)
+    - [How To Use This Project](#how-to-use-this-project)
+      - [Fork GitHub Repository](#fork-github-repository)
+      - [Clone Github Repository](#clone-github-repository)
+      - [Project Set Up After Forking or Cloning](#project-set-up-after-forking-or-cloning)
+    - [Deployment to Heroku](#deployment-to-heroku)
+    - [AWS Bucket Creation](#aws-bucket-creation)
+    - [Connect Django to AWS Bucket](#connect-django-to-aws-bucket)
   - [Credits](#credits)
     - [Content](#content)
     - [Code](#code)
+  - [Known Bugs](#known-bugs)
   - [Acknowledgements](#acknowledgements)
 
 
@@ -703,96 +709,314 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Aden
 ## Testing
 [Go to the top](#table-of-contents)
 
-The testing documentation can be found [here](https://github.com/Zilvaro/digitalz-adenblog/blob/main/TESTING.md#digitalz-adenblog-testing).
-
-
-### Major Errors & Learnings
-
-1. Displaying 2 models on the same template. Initially I was trying to implement by creating 2 apps and the include them into index.html. However the result was the rendering the same data twice, depending which one I chose in views.py. 
-After reading different materials I succesfully implemented the Context-View that worked just perfectly:
-
-```
-class PostList(generic.TemplateView):
-    """View to render the list of POSTs on the home page."""
-    template_name = 'index.html'
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['blog_content'] = Post.objects.all()
-        context['hero_content'] = HeroContent.objects.all()
-        return context
-```
-
-2. When Content or Post was created from the frontend, I wanted the slug-field to be created automatically and to use summernote-field for content creation. But the system consistently gave errors, even things looked normal:
-
-![Attribute Error image ](assets/readme_files/attribute-error%20message.jpg)
-
-The solution I learning for other similar instances programming with Classes:
-
-* I added a custom .save() method to the Post model, so that whenever it's saved, it checks to see if there's a slug and if not, generates one using slufigy on the title
-
-```
-def save(self, *args, **kwargs):
-        if not self.slug:            
-            self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
-```
-
-
-* Even I had the Summernote field set up correctly in forms.py, it just wasn't being accessed in the view - instead relying on manually specifying the fields to render. Adding the full form-class into the views.py did the trick:
-
-```
-class AddContentView(SuccessMessageMixin, generic.CreateView):
-    """The view that renders the form to add the new Content
-       from the front-end."""
-    model = HeroContent
-    template_name = 'add_content.html'
-    
-    form_class = AddContentForm
-    
-    success_message = "You added a new Content! Bravo!"
-```
-
+The testing documentation can be found [here](https://github.com/Zilvaro/adenwell-ecommerce/blob/main/TESTING.md).
 
 
 
 ## Deployment
 
-This project was developed using a [GitPod](https://gitpod.io/) workspace. The code was committed to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/") using the terminal.
+The project was developed using[GitPod](https://gitpod.io/) workspace. The code was commited to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/") using the terminal. The web application is deployed on Heroku as Github Pages is not able to host a Python project. Static and media files are being stored in AWS S3. The repository is hosted on Github.
 
-### Deploying on Heroku
-To deploy this page to Heroku from its GitHub repository, the following steps were taken:
 
-1. Create the Heroku App:
-    - Select "Create new app" in Heroku.
-    - Choose a name for your app and select the location.
+### How To Use This Project
+To use and further develop this project you can either fork or clone the repository.  
 
-2. Attach the Postgres database:
-    - In the Resources tab, under add-ons, type in Postgres and select the Heroku Postgres option.
 
-3. Prepare the environment and settings.py file:
-    * In the Settings tab, click on Reveal Config Vars and copy the url next to DATABASE_URL.
-    * In your GitPod workspace, create an env.py file in the main directory. 
-    * Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
-    * Add the SECRET_KEY value to the Config Vars in Heroku.
-    * Update the settings.py file to import the env file and add the SECRETKEY and DATABASE_URL file paths.
-    * Update the Config Vars with the Cloudinary url, adding into the settings.py file also.
-    * In settings.py add the following sections:
-        * Cloudinary to the INSTALLED_APPS list
-        * STATICFILE_STORAGE
-        * STATICFILES_DIRS
-        * STATIC_ROOT
-        * MEDIA_URL
-        * DEFAULT_FILE_STORAGE
-        * TEMPLATES_DIR
-        * Update DIRS in TEMPLATES with TEMPLATES_DIR
-        * Update ALLOWED_HOSTS with ['app_name.heroku.com', 'localhost']
+#### Fork GitHub Repository
+By forking the GitHub repository you can make a copy of the original repository on your GitHub account to view and/or make changes without affecting the original repository, by using the following steps:  
 
-4. Store Static and Media files in Cloudinary and Deploy to Heroku:
-    - Create three directories in the main directory; media, storage and templates.
-    - Create a file named "Procfile" in the main directory and add the following:
-        - web: gunicorn project-name.wsgi
-    - Go to Deploy tab on Heroku and connect to the GitHub, then to the required repository.
-    Click on Deploy Branch and wait for the build to load. When the build is complete, the app can be opened through Heroku.
+1. Log in to GitHub.  
+2. Navigate to the main page of the GitHub Repository that you want to fork.  
+3. At the top right of the Repository just below your profile picture, locate the "Fork" button.  
+4. You should now have a copy of the original repository in your GitHub account.  
+5. Changes made to the forked repository can be merged with the original repository via a pull request.  
+
+
+#### Clone Github Repository
+By cloning a GitHub repository you can create a local copy on your computer of the remote repository. The developer who clones a repository can synchronize their copy of the codebase with any updates made by fellow developers with push or pull request. Cloning is done by using the following steps:  
+
+1. Log in to GitHub.  
+2. Navigate to the main page of the GitHub Repository that you want to clone.  
+3. Above the list of files, click the dropdown called "Code".  
+4. To clone the repository using HTTPS, under "HTTPS", copy the link.  
+5. Open Git Bash.  
+6. Change the current working directory to the location where you want the cloned directory to be made.  
+7. Type git clone, and then paste the URL you copied in Step 4.  
+```$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY```
+8. Press Enter. Your local clone will be created.   
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```  
+Changes made on the local machine (cloned repository) can be pushed to the upstream repository directly if you have a write access for the repository. Otherwise, the changes made in the cloned repository are first pushed to the forked repository, and then a pull request is created.  
+Click [Here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) to retrieve pictures for some of the buttons and more detailed explanations of the above process.  
+#### Project Set Up After Forking or Cloning  
+1. Install all dependencies by typing in the CLI ```pip3 install -r requirements.txt```  
+2. Create a ```.gitignore``` file and ```env.py``` file in the project's root directory. Add the ```env.py``` file to ```.gitignore```. 
+3. Inside the env.py file, enter the project's environment variables:   
+   ```
+   import os
+   os.environ.setdefault("SECRET_KEY", <your_secret_key>)
+   os.environ.setdefault("DEVELOPMENT", '1')
+   os.environ.setdefault("STRIPE_PUBLIC_KEY", <your_key>)
+   os.environ.setdefault("STRIPE_SECRET_KEY", <your_key>)
+   os.environ.setdefault("STRIPE_WH_SECRET", <your_key>)
+   ```   
+   You can get the keys from:
+   - "SECRET_KEY" can be generated using [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)   
+   - "STRIPE_PUBLIC_KEY" and "STRIPE_SECRET_KEY" can be generated by creating a stripe account. The keys are found in 'Developers' Section, under 'API Keys'.  
+   - In the Developer Section, under 'Webhooks', add a new endpoint.  "STRIPE_WH_SECRET". On Endpoint URL, enter:  
+   ``` https://<your_host_url>/checkout/wh/ ```   
+   Select to listen to all events, and create endpoint, and you can view your "STRIPE_WH_SECRET".   
+4. Make migrations to setup the inital database operations.  
+   ``` 
+   python3 manage.py makemigrations 
+   python3 manage.py migrate 
+   ```   
+5. Load data for the database or create data manually. 
+   ```
+   python3 manage.py loaddata <app_name>
+   ``` 
+6. Create a super user.
+   ```
+   python3 manage.py create superuser
+   ```  
+The project should now complete to run and can now be used for development. To run the project, type in the CLI terminal: ```python3 manage.py runserver```     
+### Deployment to Heroku 
+This project is deployed on Heroku for production, with all static and media files stored on AWS S3. These are steps to deploy on Heroku:
+1. Navigate to Heroku.com, create a new account or login if you already have an account. On the dashboard page, click "Create New App" button. Give the app a name, the name must be unique with hypens between words. Set the region closest to you, and click "Create App".   
+2. On the resources tab, provision a new Heroku Postgres database.  
+3. Configure variables on Heroku by navigating to Settings, and click on Reveal Config Vars. You may not have all the values yet. Add the others as you progress through the steps.   
+   Varables | Key   
+   ---| ---   
+   AWS_ACCESS_KEY_ID | your_access_key_id_from_AWS   
+   AWS_SECRET_ACCESS_KEY | your_secret_access_key_from_AWS  
+   DATABASE_URL | your_database_url   
+   EMAIL_HOST_PASS | your_app_password_from_your_email   
+   EMAIL_HOST_USER | your_email_address  
+   SECRET_KEY | your_secret_key 
+   STRIPE_PUBLIC_KEY | your_stripe_public_key  
+   STRIPE_SECRET_KEY | your_stripe_secret_key  
+   USE_AWS | True 
+4. If you haven't install it, install dj_database_url and psycopg2.
+   ```
+   pip3 install dj_database_url
+   pip3 install psycopg2-binary
+   ```
+   Note: you don't have to do this if you've installed all dependencies in the requirements.txt file.  
+5. Set up a new database for the site by going to the project's settings.py and importing dj_database_url. Comment out the database's default configuration, and replace the default database with a call to dj_database_url.parse and pass it the database URL from Heroku (you can get it from your config variables in your app setting tab)
+   ```
+   DATABASES = {
+     'default': dj_database_url.parse('YOUR_DATABASE_URL_FROM_HEROKU')
+   }
+   ```
+6. Run migrations
+   ```
+   python3 manage.py migrate
+   ```  
+7. Import data to the database.
+    - Make sure your manage.py file is connected to your sqlite3 database.
+    - Use this command to backup your current database and load it into a db.json file:
+    ```
+    ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+    ```
+    - Connect your manage.py file to your postgres database
+    - Then use this command to load your data from the db.json file into postgres:
+    ``` 
+    ./manage.py loaddata db.json
+    ``` 
+8. Set up a new superuser, fill out the username, email address, and password.
+   ```
+   python3 manage.py create superuser
+   ```  
+9. Remove the database config from Heroku and uncomment the original config. Add a conditional statement to define that when the app is running on Heroku. we connect to Postgres, and otherwise, we connect to Sqlite.   
+   ```
+   if 'DATABASE_URL' in os.environ:
+      DATABASES = {
+         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+      }
+   else:
+      DATABASES = {
+         'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+         }
+      }
+   ```  
+10. Install gunicorn which will act as the webserver, and put it on the requirements.txt.   
+   ``` 
+   pip3 install gunicorn
+   pip3 freeze > requirements.txt
+   ```
+   Note: you don't have to do this if you've installed all dependencies in the requirements.txt file.
+11. Create a Procfile, to tell Heroku to create a web dyno, which will run unicorn and serve the Django app.   
+   Inside the Procfile:
+   ```
+   web: gunicorn shoes_and_more.wsgi:application
+   ```
+12. Login to Heroku through CLI, using ```heroku login```. Once logged in, disable the collect static temporarily, so that Heroku won't try to collect static files when it deploys.
+   ```
+   heroku config:set DISABLE_COLLECTSTATIC=1 --app shoes-and-more
+   ```
+   And add the hostname of the Heroku app to allowed hosts in the project's settings.py, and also add localhost so that Gitpod will still work as well:  
+   ```
+   ALLOWED_HOSTS = ['shoes-and-more.herokuapp.com', 'localhost']
+   ```   
+13. Add, commit, and push to gitpod and then to Heroku. After pushing to gitpod as usual, initialize git remote first:
+   ```
+   heroku git:remote -a shoes-and-more
+   ``` 
+   Then push to Heroku:
+   ```
+   git push heroku main
+   ```
+14. Go to the app's dashboard on Heroku and go to Deploy. Connect the app to Github by clicking Github and search for the repository. Click connect. Also enable the automatic deploy by clicking Enable Automatic Deploys, so that everytime we push to github, the code will automatically be deployed to Heroku as well.  
+15. Go back to settings.py and replace the secret key setting with the call to get it from the environment, and use empty string as a default. 
+   ```
+   SECRET_KEY = os.environ.get('SECRET_KEY', '')
+   ```
+   Set debug to be true only if there's a variable called development in the environment.
+   ```
+   DEBUG = 'DEVELOPMENT' in os.environ
+   ```
+  
+### AWS Bucket Creation   
+All static and media files in this project are stored in [Amazon Web Services S3 bucket](https://aws.amazon.com/) which is a cloud based storage service. You can create your own bucket by following these steps:   
+1. Go to [Amazon Web Service website](https://aws.amazon.com/) and click on Create An AWS Account, or login if you already have an account.  
+2. Login to your new account, go to AWS Management Console and find service S3. Click on Create Bucket.   
+   - Give it a name (I recommend naming your bucket to match the Heroku app name), and choose region closest to you.  
+   - In Object Ownership section, choose ACLS enabled. and Bucket Owner Preffered.   
+   - Uncheck box 'Block All Public Access'.  
+   - Check box 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'  
+   - Click on Create Bucket, and your bucket is created.  
+3. Click on your newly created bucket, and navigate to the Properties tab. Scroll down to the bottom until you find Static Website Hosting. Click on Edit, then enable. 
+   - Hosting type: choose Host a Static Website   
+   - Index document: index.html  
+   - Error document: error.html
+   - Click on Save Changes.  
+4. Navigate to the Permissions tab. Scroll down to the bottom until you find Cross-origin resource sharing (CORS). Click on Edit, and paste in this Cors Configuration below, which is going to set up the required access between the Heroku app and this S3 bucket. Click on Save Changes. 
+   ```
+   [
+      {
+         "AllowedHeaders": [
+            "Authorization"
+         ],
+         "AllowedMethods": [
+            "GET"
+         ],
+         "AllowedOrigins": [
+            "*"
+         ],
+         "ExposeHeaders": []
+      }
+   ]
+   ```   
+   Still on the Permissions tab, find Bucket policy, click on Edit, and then go to Policy Generator. 
+   - Select Type of Policy: choose S3 Bucket Policy   
+   - Effect: choose Allow   
+   - Principal: *   
+   - Actions: select GetObject   
+   - Fill in the Amazon Resource Name (ARN), from the Bucket ARN back in the Bucket Policy   
+   - Click on the Add Statement and then Generate Policy. Copy the policy and paste in the bucket policy editor.  
+   - Add a slash star on to the end of the resource key (because we want to allow access to all resources in this bucket). Click Save.
+      The resource key should look like this
+      ```  
+      "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*",  
+      ```  
+   
+   Still on Permissions tab, go to Access Control List (ACL) section, click Edit and enable List for Everyone (public access), and accept the warning box.  
+5. With the bucket ready, now we need to create a user to access it through another service called IAM which stands for Identity and Access Management. Go back to the service menu and open IAM.   
+   a. Create a group for our user to live in.  
+      Click User Groups, and then create a new group with a name you want. I gave the group the name: manage-shoes-and-more. Scroll down to the bottom and click on Create Group.     
+   b. Create an access policy giving the group access to the S3 bucket that has been created.  
+      - Click on Policy, and then Create Policy. Go to the JSON tab, and then select import managed policy, which will let us import one that AWS has pre-built for full access to S3. Search for S3, then import the AmazonS3FullAccess policy.   
+      - Because we only want to allow full access to our new bucket and everything within it, paste the bucket ARN (from the bucket policy page in s3) in the JSON editor.
+      ```
+      "Resource": [
+         "arn:aws:s3:::YOUR_BUCKET_NAME",
+         "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+      ]
+      ```  
+      Now click on Next:Tags, then click Next:Review. 
+      - Give the review policy a name and a description, then click Create Policy. The policy has now been created. 
+      
+   c. Finally, assign the user to the group so it can use the policy to access all our files.  
+      - Go to User Groups, and select the group. Go to the Permissions tab, open the Add Permissions dropdown, and click Attach Policies.  
+      - Select the policy and click Add permissions at the bottom.  
+      - Create a user to put in the group, by going to the Users page, and clicking Add Users.  
+      - Set a user name, give them access type: Programmatic access, and then click Next: Permissions.   
+      - Check on the group that has the policy attached. Click Next: Tags, then click Next: Review, and lastly Create User.     
+      - Download the csv file and save it. 
+   
+### Connect Django to AWS Bucket 
+Note: If you've forked the repository, all of these steps are already done/ written on the files. Make sure you've installed all dependencies in the requirements.txt file, add all the AWS-related Config Vars to Heroku, and remove the DISABLE_COLLECTSTATIC variable from Heroku.   
+Here are the steps I took to connect Django to AWS:  
+1. Install two new packages: boto3 and django-storages. Freeze them into requirements.txt.   
+   ```
+   pip3 install boto3
+   pip3 install django-storages 
+   pip3 freeze > requirements.txt  
+   ```  
+2. Add storages to the Installed Apps in settings.py.
+   
+3. In settings.py, we need to set cache control, set bucket configurations, set static and media files location, and override static and media URLs in production. We'll only want to do this on Heroku, so add an if statement as well.
+   ```
+   if 'USE_AWS' in os.environ:
+      # Cache control
+      AWS_S3_OBJECT_PARAMETERS = {
+         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+         'CacheControl': 'max-age=94608000',
+      }
+
+      # Bucket Config
+      AWS_STORAGE_BUCKET_NAME = 'YOUR_BUCKET_NAME'
+      AWS_S3_REGION_NAME = 'YOUR_REGION'
+      AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+      AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+      AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+      # Static and media files
+      STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+      STATICFILES_LOCATION = 'static'
+      DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+      MEDIAFILES_LOCATION = 'media' 
+
+      # Override static and media URLs in production
+      STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+      MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+   ```
+   Set the Config Vars on Heroku. On your app's dashboard on Heroku, go to Settings and click Reveal Convig Vars. Set this variables:
+   Variables | Value
+   --- | ---
+   AWS_ACCESS_KEY_ID | your access key id from the csv file that you've downloaded before
+   AWS_SECRET_ACCESS_KEY | your secret access key from the csv file that you've downloaded before
+   USE_AWS | True    
+   Also remove the COLLECTSTATIC variable from the Config Vars.
+
+4. We then want to tell Django that in production we want to use S3 to store our static files whenever someone runs collectstatic, and that we sent any uploaded images to go there as well.  
+Create a custom_storages.py file in your project's root directory, and inside it, include the Static and Media Storage locations: 
+   ```
+   from django.conf import settings
+   from storages.backends.s3boto3 import S3Boto3Storage
+ 
+
+   class StaticStorage(S3Boto3Storage):
+      location = settings.STATICFILES_LOCATION
+
+
+   class MediaStorage(S3Boto3Storage):
+      location = settings.MEDIAFILES_LOCATION
+   ```  
+5. Finally, push these changes on Github.
+   ```
+   git add .
+   git commit -m "Your commit message"
+   git push
+   ```
 
 
 
@@ -802,22 +1026,44 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 ### Content
 
 * Website content was written by the developer.
-* Example images & some quotes were taken from [Aden Wellness](https://adenwell.com/).
+* Example images & some quotes were taken from AdenWellnes internal database as well as:
+    - [Aden Wellness](https://adenwell.com/)
+    - [Aden Wellness Amazon](https://www.amazon.com/stores/Enjoyeveryday/page/41E280B2-E0B0-4A0A-8FAA-65A661BC23FB?ref_=ast_bln)
+* The categories images were taken from the following sources:
+    - [Aromatic Oils](https://www.edenbotanicals.com/products/bestsellers.html)
+    - [Diffusers](https://www.youngliving.com/en_GB/products/c/essential-oils/tools)
 
 
 ### Code
 
 * [Stack Overflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
 
-* Message implementation an dismissal code is taken from [Code Institute](https://codeinstitute.net/)'s django-blog project.
+* The code in Code Institute's video on the Boutique Ado project was used as the main reference point to set up an e-commerce / online store project using HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage.
+
+
+## Known Bugs
+
+**Checkout process for unregistered users**
+An issue with the checkout process for unregistered users was discovered due to the save_info check box not being present.
+This issue was solved by adding a condition to the stripe_elements.js in order to check if the checkbox was present before trying to assign the saveInfo variable.
+
+**Admin was not able to delete product in CRUD**
+Relation in checkoutOrderLineItem did not exist. This issue was solved by migrating the specific application, that was not captured by fullApp migrations.
+
+**Responsiveness in product quantity form on shopping bag**
+As stated in the testing section, the appearance of the product quantity form on the shopping bag page can be improved on smaller devices. This issue has not yet been tackled due to time constrains as it does not affect the overall functionality.
+
 
 
 ## Acknowledgements
 
-* For README.md file/Deployment section, reference of github.com/josswe26/code-buddy/ was considered.
+* For README.md file/Deployment section, reference of github.com/josswe26/noplast was considered.
 
 * My tutor, Marcel, for his invaluable support, feedback and guidance through the whole process.
 
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
+
+* FIFA for organizing championship during project submission period and providing nesessary pauses from coding.
+  
 
 [Go to the top](#table-of-contents)
