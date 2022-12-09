@@ -66,6 +66,8 @@ The working version of the AdenWell e-commerce app can be found [here](https://a
     - [Libraries and Frameworks](#libraries-and-frameworks)
     - [Packages / Dependencies Installed](#packages--dependencies-installed)
     - [Database Management](#database-management)
+    - [Payment Service](#payment-service)
+    - [Cloud Storage](#cloud-storage)
     - [Tools and Programs](#tools-and-programs)
   - [Testing](#testing)
     - [Major Errors \& Learnings](#major-errors--learnings)
@@ -250,9 +252,13 @@ According to the strategy table, not all features can be implemented in the firs
 #### User Stories
 
 GitHub projects was used as project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress. Each UserStory was given a priority label and a milestone note.
+The issue that was decided not to complete received a comment before closing.
 
 
 ![User Stories Progress - GitHub](/media/readme_files/userstories-prioritylabels-milestones.JPG)
+![User Stories Comments - GitHub](/media/readme_files/issue-not-completed.JPG)
+![User Stories Issues Closed](/media/readme_files/closed-issues.JPG)
+
 
 
 ##### User Stories - Viewing and Navigation
@@ -623,15 +629,30 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Aden
 * [Gunicorn](https://gunicorn.org/)  
     * Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
 
+* [Django Countries](https://pypi.org/project/django-countries/) was used to provide country choices for use with forms and a country field for models.
+
+* [Pillow](https://pypi.org/project/Pillow/) was used to add image processing capabilities.  
+
 * [Summernote](https://summernote.org/) 
     * Summernote has been used as WYSIWYG editor.
-
-* [Cloudinary](https://cloudinary.com/)
-    * Cloudinary has been used as image management solution
+  
 
 ### Database Management
-* [Heroku Postgres](https://www.heroku.com/postgres)   
-    * Heroku Postgres database was used in production, as a service based on PostgreSQL provided by Heroku.
+
+* [SQLite](https://www.sqlite.com/index.html) was used as a single-file database during development.
+
+* [Elephant Postgres](https://www.elephantsql.com/)   
+    * Elephant PostgreSQL database was used in production, as a service based on PostgreSQL provided by Elephant.
+
+
+### Payment Service
+
+   * [Stripe](https://stripe.com/en-gb-nl) was used to process all online payments transactions.
+
+
+### Cloud Storage
+
+* [Amazon Web Service S3](https://aws.amazon.com/s3/) was used to store all static and media files in production. 
 
 
 ### Tools and Programs
@@ -659,6 +680,9 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Aden
 
 * [Balsamiq](https://balsamiq.com/)
      * Balsamiq was used to create the wireframes during the design phase of the project
+
+* [Lucid App](https://www.lucidapp.com )
+     * The database model has been designed LucidApp/Lucidchart app during the design phase of the project
 
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
     * Chrome DevTools was used during development process for code review and to test responsiveness.
