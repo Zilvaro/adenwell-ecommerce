@@ -57,7 +57,6 @@
 
 ### Epic 2 - Shopping Bag and Checkout
 
-
 #### As a shopper, I want to view all items currently on my shopping bag and be able to update them.
 * Products added to the shopping bag are displayed in the shopping bag page.
 
@@ -129,47 +128,31 @@
 * Registered shoppers are also able to update or delete their existing reviews.
 
 
-### Epic 5 - Favorites
-
-#### As a registered shopper, I want to be able to keep a list of my favorite products to purchase again in the future.
-
-* A favorites page has been created for registered shoppers to keep track of their favorite products.
-
-
-#### As a registered shopper, I want to be able to easily add and remove favorite products.
-
-* A favorites icon is present inside the image in the products details page, to easily add and remove products to the favorites list.
-
-* A remove link is also provided for each product inside the favorites page.
-
-
-### Epic 6 - Product Admin
-
+**Epic 5 - Product Admin**
 
 #### As a site admin, I want to be able to add and update products.
 
-* Full CRUD functionality has been implemented for site admins to manage the website products.
+* CRUD functionality is implemented that allows to add or edit product from the front-end while being notified on the stage of activity and success or failure of it.
 
+* Products and categories can also be conveniently added from the admin module.
 
 #### As a site admin, I want to be able to remove product no longer available.
 
-* Full CRUD functionality has been implemented for site admins to manage the website products.
+* Products can be easily removed from the fron-end (CRUD) or admin backend.
 
-### Epic 7 - Support Organizations
+#### As a site admin, I want to display company/brand news and promotions.
 
-
-#### As a site admin, I want to give the users the opportunity to support organizations helping to reduce plastic waste.
-
-* An organizations page is available for all shoppers who want to learn more about organizations protecting the oceans.
-
-* Links to the organization and donations pages are provided for each organization.
+* The convienient form in admin allows to upload image, alt-text, heading, excerpt, article (photo, text, links, video).
+* Admin can choose in which carousel window to place the content and which position the content shall be within the window (eg. 1st or 3rd) 
+* Admin can upload any image file with title and use it in one of the category field to promote a specific category or offer (by allocating the image#), or use the image anywhere in the application.
 
 
-### Epic 8 - Newsletter Subscription
+### Epic 6 - Newsletter Subscription
 
 #### As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
 
 * A newsletter subscription form had been added to the website footer, making it available for the shoppers across the whole website.
+
 
 
 ## Code Validation
