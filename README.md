@@ -1063,7 +1063,7 @@ As stated in the testing section, the appearance of the product quantity form on
 
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
-* FIFA for organizing championship during project submission period and providing nesessary pauses from coding.
+* FIFA for organizing worldcup during project submission period and providing nesessary pauses from coding.
   
 
 [Go to the top](#table-of-contents)
