@@ -502,6 +502,10 @@ input[name='q']::placeholder {
     width: 98%;
 }
 
+.extra-space {
+    height: 10vw;
+}
+
 
 /* MailChimp */
 

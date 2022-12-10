@@ -20,7 +20,7 @@ class HomeContent(models.Model):
     content_image_url = models.URLField(max_length=1024, null=True, blank=True)
     content_image = models.ImageField(null=True, blank=True)
     image_alt_text = models.CharField(max_length=200, blank=True,
-                                      default='aden wellness theme image')        
+                                      default='aden wellness theme image')
     carousel_block = models.IntegerField(choices=CAROUSEL, default=1)
     image_order = models.IntegerField(choices=IMAGEORDER, default=1)
     updated_on = models.DateTimeField(auto_now=True)

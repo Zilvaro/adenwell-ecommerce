@@ -344,6 +344,10 @@ The database model has been designed using [lucidapp](https://lucid.app/). The t
 ![AdenWell E-commerce Database Model](/media/readme_files/database-model.png)
 
 
+Some of the new models here - Carousel content management , Media and category database, Contact Message clients registrattion:
+
+![Adenapp models](/media/readme_files/new-models.jpg)
+
 #### Wireframes
 
 [Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
