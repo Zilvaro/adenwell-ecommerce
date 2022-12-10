@@ -499,7 +499,7 @@ input[name='q']::placeholder {
 
 .textarea {
     /* width: almost fit-content; */
-    width: 99%;
+    width: 98%;
 }
 
 

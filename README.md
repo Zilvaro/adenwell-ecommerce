@@ -170,9 +170,11 @@ In effect, Adenwell is a business presentation and ecommerce application with fu
 * As a site admin, I want to display company/brand news and promotions.
   
 
-**Epic 6 - Newsletter Subscription**
+**Epic 6 - Newsletter Subscription & Contact**
 
 * As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
+
+* As a site User I want to be able to send a message to admin, so that I can ask question or make inquiry about a product
 
 
 
@@ -282,7 +284,7 @@ The issue that was decided not to complete received a comment before closing.
 8.	As a **Site User** I want to be able **receive an email confirmation after registering**, so that I can **verify that my account registration was successful**
 9.	As a **Site User** I want to be able **have a personalized user profile**, so that I can **view my personal order history and order confirmations, and save my payment information**
 10.	As a **Site User** I want to be able **I can sign up for a newsletter**, so that I can **know new product releases and offers**
-11.	As a **Site User** I want to be able **I can send a message to admin**, so that I can **Ask question or make inquiry about faulty product**
+11.	As a **Site User** I want to be able **send a message to admin**, so that I can **Ask question or make inquiry about a product**
 
 ##### User Stories - Sorting and Searching
 

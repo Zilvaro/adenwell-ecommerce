@@ -83,7 +83,7 @@
 * An email is being sent to the email address provided by the shopper during the checkout.
 
 
-### Epic 3 - shopper Accounts
+### Epic 3 - Shopper Accounts
 
 
 #### As a frequent shopper, I want to be able to register an account using my email address to be able to keep my records and interact with the website.
@@ -147,11 +147,23 @@
 * Admin can upload any image file with title and use it in one of the category field to promote a specific category or offer (by allocating the image#), or use the image anywhere in the application.
 
 
-### Epic 6 - Newsletter Subscription
+### Epic 6 - Newsletter Subscription & Contact
 
 #### As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
 
 * A newsletter subscription form had been added to the website footer, making it available for the shoppers across the whole website.
+
+![Epic 6 Subscription form](/media/testing_files/pre-filled-subscription-form.JPG)
+![Epic 6 Subscription confirmation](/media/testing_files/thank-you-subscription-form.JPG)
+![Epic 6 Subscriber information](/media/testing_files/subscriber-subscription-form.JPG)
+
+#### As a site User I want to be able to send a message to admin, so that I can ask question or make inquiry about a product
+
+* A contact form had been added to the website footer, making it available for the users across the whole website to write a message.
+
+![Epic 6 Contact form](/media/testing_files/pre-filled-contact-form.JPG)
+![Epic 6 Contact Message confirmation](/media/testing_files/thank-you-contact-form.JPG)
+![Epic 6 Contact Content](/media/testing_files/contact-contact-form.JPG)
 
 
 
@@ -159,7 +171,7 @@
 
 ### HTML
 
-* No errors were returned when passing through the [W3C Markup Validator](https://validator.w3.org/) validator. However, managed to find a stray end tag div in toast_success.html which was fixed.
+* No significant errors were returned when passing through the [W3C Markup Validator](https://validator.w3.org/) validator. However, there were warnings where Summernote text field was rendered within H-element - that elements mismatch  
 
 ### CSS
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) found no errors on my CSS files.
@@ -174,7 +186,7 @@ Other errors regarding unused imports were corrected by removing the unnecessary
 
 ### Javascript
 
-* [JSHint](https://jshint.com/) found a total of 6 warnings concerning missing or unnecessary semicolons. These warnings were corrected.
+* [JSHint](https://jshint.com/) found several warnings concerning missing or unnecessary semicolons. These warnings were corrected.
 
 
 ## Accessibility
