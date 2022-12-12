@@ -231,27 +231,23 @@ The low score on the product admin pages, depends mostly on the aria-labels bein
 
 Browser | Outcome | Pass/Fail | 
 --- | --- | --- |
-Google Chrome | No appearance, responsiveness nor functionality issues. | Pass |
-Safari | No appearance, responsiveness nor functionality issues. | Pass |
-Mozilla Firefox | No responsiveness nor functionality issues. | Pass |
-Microsoft Edge | No appearance, responsiveness nor functionality issues. | Pass |
+Google Chrome | No appearance, responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Safari | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Mozilla Firefox | No responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
 
 
 ### Device Compatibility
 
 Device | Operative System |Outcome | Pass/Fail
 --- | --- | --- | --- |
-Dell Optiplex 7060 | Windows 11 | No appearance, responsiveness nor functionality issues. | Pass |
-MacBook Pro 15" | macOS Big Sur | No appearance, responsiveness nor functionality issues. | Pass |
-Dell Latitude 5300 | Windows 10 | No appearance, responsiveness nor functionality issues. | Pass |
-iPad Pro 12.9" | iOS 15 | No appearance, responsiveness nor functionality issues. | Pass |
-iPad Pro 10.5" | iOS 15 |No appearance, responsiveness nor functionality issues. | Pass |
-iPhone XR | iOS 15 |No appearance, responsiveness nor functionality issues. | Pass |
-iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | Pass |
+HP Lattitude | Windows 10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Del XPS13 | Windows10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPhone 6 | iOS 14 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Samsung S20 | Android 10 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Nokia 8 | Android 9 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
 
-**Note**
 
-The appearance of the product quantity form on the shopping bag page can be improved on smaller devices.
 
 ### Test Results
 
@@ -259,156 +255,107 @@ The appearance of the product quantity form on the shopping bag page can be impr
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Main Logo Link | Clicking the link redirects to the home page. | Pass |
-Shop Link | Clicking the link redirects to the products page. | Pass |
-About Link | Clicking the link redirects to about section in the home page. | Pass |
-Support Link | Clicking the link redirects to the organizations page. | Pass |
-My Account Icon - Register Link | Clicking the link redirects to the account sign up page. | Pass |
-My Account Icon - Login Link | Clicking the link redirects to the account sign in page. | Pass |
-My Account Icon - Logout link | Clicking the link redirects to the account sign out page. | Pass |
-My Account Icon - Product Management Link | Clicking the link redirects to the add product page. | Pass |
-My Account Icon - My Profile Link | Clicking the link redirects to the profile page. | Pass |
-My Account Icon - My Reviews Link | Clicking the link redirects to the reviews page. | Pass |
-Shopping Cart Icon | Clicking the link redirects to the shopping cart. | Pass |
-Search Bar | Clicking the link redirects to the products page and display the matching products. | Pass |
-Privacy Policy Link | Clicking the link opens the privacy policy. | Pass |
-Facebook Icon | Clicking the link open the business Facebook page on a separate tab. | Pass |
-Newsletter Form | Email address gets registered to the database when submitting the form. | Pass |
+Main Logo Link | Clicking the link redirects to the home page. |<span style="color:green">Pass</span> |
+Shop Now Link | Clicking the link redirects to the products page. | <span style="color:green">Pass</span> |
+My Account Icon - Register Link | Clicking the link redirects to the account sign up page. | <span style="color:green">Pass</span> |
+My Account Icon - Login Link | Clicking the link redirects to the account sign in page. | <span style="color:green">Pass</span> |
+My Account Icon - Logout link | Clicking the link redirects to the account sign out page. | <span style="color:green">Pass</span> |
+My Account Icon - Product Management Link | Clicking the link redirects to the add product page. | <span style="color:green">Pass</span> |
+My Account Icon - My Profile Link | Clicking the link redirects to the profile page. | <span style="color:green">Pass</span> |
+Shopping Cart Icon | Clicking the link redirects to the shopping cart. | <span style="color:green">Pass</span> |
+Search Bar | Clicking the link redirects to the products page and display the matching products. | <span style="color:green">Pass</span> |
+Privacy Policy Link | Clicking the link opens the privacy policy. | <span style="color:green">Pass</span> |
+Facebook Icon | Clicking the link open the business Facebook page on a separate tab. | <span style="color:green">Pass</span> |
+Contact Link | Clicking the link opens the message form. | <span style="color:green">Pass</span> |
+Newsletter Form | Email address gets registered to the database when submitting the form. | <span style="color:green">Pass</span> |
 
 
 #### Home Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Categories Links | Clicking any of the links will redirect to the products page and filter the products on that category. | Pass |
-Down Arrow Link | Clicking the link redirects to about section in the home page. | Pass |
+Content Links | Clicking any of carousel cards the links will redirect to the article or more related information. | <span style="color:green">Pass</span> |
+Categories Links | Clicking any of the links will redirect to the products page and filter the products on that category. | <span style="color:green">Pass</span> |
+Down Arrow Link | Clicking the link redirects to about section in the home page. | <span style="color:green">Pass</span> |
 
 
 #### Products Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Product Navigation Bar Links | Clicking any of the links will filter the products on that category. | Pass |
-Sort By Selector | Sort by functionality sort the products depending on the selection. | Pass |
-Favorites Link | Clicking the link redirects to the favorites page. | Pass |
-Product Image | Clicking the image redirect to the product details page for that specific product. | Pass |
-Product Edit Link | Clicking the link redirects to the edit product page. | Pass |
-Product Delete Link | Clicking the link delete the product from the database. | Pass |
+Product Navigation Bar Links | Clicking any of the links will filter the products on that category. | <span style="color:green">Pass</span> |
+Sort By Selector | Sort by functionality sort the products depending on the selection. | <span style="color:green">Pass</span> |
+Product Image | Clicking the image redirect to the product details page for that specific product. | <span style="color:green">Pass</span> |
+Product Edit Link | Clicking the link redirects to the edit product page. | <span style="color:green">Pass</span> |
+Product Delete Link | Clicking the link delete the product from the database. | <span style="color:green">Pass</span> |
 
 
 #### Product Details Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Product Navigation Bar Links | Clicking any of the links will redirect to the products page and filter the products on that category. | Pass
-Product Image | Clicking the image opens it on a separate tab. | Pass |
-Favorites Icon | Clicking the icon toggle the product on the favorites database. | Pass |
-Product Edit Link | Clicking the link redirects to the edit product page. | Pass |
-Product Delete Link | Clicking the link deletes the product from the database. | Pass |
-Decrease Quantity Button | Decreases the quantity on the input form. | Pass |
-Increase Quantity Button | Increases the quantity on the input form. | Pass |
-Keep Shopping Button | Clicking the button redirects to the products page. | Pass |
-Add To Bag Button | Clicking the button adds the specified quantity of the product to the shopping bag. | Pass |
-Reviews Link | Clicking the link toggle the product reviews. | Pass |
-Sort By Selector | Sort by functionality sort the reviews depending on the selection. | Pass |
-Review Edit Link | Clicking the link redirects to the edit review page. | Pass |
-Review Delete Link | Clicking the link delete the review from the database. | Pass |
-Leave A Review Button | Clicking the button redirects to the add review page. | Pass |
+Product Navigation Bar Links | Clicking any of the links will redirect to the products page and filter the products on that category. | <span style="color:green">Pass</span> |
+Product Image | Clicking the image opens it on a separate tab. | <span style="color:green">Pass</span> |
+Product Edit Link | Clicking the link redirects to the edit product page. | <span style="color:green">Pass</span> |
+Product Delete Link | Clicking the link deletes the product from the database. | <span style="color:green">Pass</span> |
+Decrease Quantity Button | Decreases the quantity on the input form. | <span style="color:green">Pass</span> |
+Increase Quantity Button | Increases the quantity on the input form. | <span style="color:green">Pass</span> |
+Keep Shopping Button | Clicking the button redirects to the products page. | <span style="color:green">Pass</span> |
+Add To Bag Button | Clicking the button adds the specified quantity of the product to the shopping bag. | <span style="color:green">Pass</span> |
+Sort By Selector | Sort by functionality sort the reviews depending on the selection. | <span style="color:green">Pass</span> |
 
 
 #### Add Product Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Select Image Button | Clicking the button allows to add an image to the form | Pass |
-Add Product Form | Product gets registered to the database when submitting the form. | Pass |
-Cancel Button | Clicking the button redirects to the products page. | Pass |
+Select Image Button | Clicking the button allows to add an image to the form | <span style="color:green">Pass</span> |
+Add Product Form | Product gets registered to the database when submitting the form. | <span style="color:green">Pass</span> |
+Cancel Button | Clicking the button redirects to the products page. | <span style="color:green">Pass</span> |
 
 
 #### Edit Product Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Select Image Button | Clicking the button allows to add or replace the image | Pass |
-Edit Product Form | Product gets updated when submitting the form. | Pass |
-Cancel Button | Clicking the button redirects to the products page. | Pass |
+Select Image Button | Clicking the button allows to add or replace the image | <span style="color:green">Pass</span> |
+Edit Product Form | Product gets updated when submitting the form. | <span style="color:green">Pass</span> |
+Cancel Button | Clicking the button redirects to the products page. | <span style="color:green">Pass</span> |
 
 
 #### Shopping Bag Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Decrease Quantity Button | Decreases the quantity on the input form. | Pass |
-Increase Quantity Button | Increases the quantity on the input form. | Pass |
-Update Link | Clicking the link update the product quantity on the shopping bag. | Pass
-Delete Link | Clicking the link removed the product from the shopping bag. | Pass
-Keep Shopping Button | Clicking the button redirects to the products page. | Pass |
-Secure Checkout Button | Clicking the button redirects to the checkout page. | Pass |
+Decrease Quantity Button | Decreases the quantity on the input form. | <span style="color:green">Pass</span> |
+Increase Quantity Button | Increases the quantity on the input form. | <span style="color:green">Pass</span> |
+Update Link | Clicking the link update the product quantity on the shopping bag. | <span style="color:green">Pass</span> |
+Delete Link | Clicking the link removed the product from the shopping bag. | <span style="color:green">Pass</span> |
+Keep Shopping Button | Clicking the button redirects to the products page. | <span style="color:green">Pass</span> |
+Secure Checkout Button | Clicking the button redirects to the checkout page. | <span style="color:green">Pass</span> |
 
 
 #### Checkout Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Checkout Form | An order gets created when submitted the form. | Pass |
-Login Link | Clicking the link redirects to the account sign in page. | Pass |
-Register Link | Clicking the link redirects to the account sign up page. | Pass |
-Save Information Check | Checking the box update the user's profile information during the checkout process. | Pass |
-Adjust Bag Link | Clicking the link redirects to shopping bag page. | Pass |
-
-
-#### Checkout Success Page
-
-Element | Expected Outcome | Pass/Fail |
---- | --- | --- |
-Want To Help? Button | Clicking the button redirects to the organizations page. | Pass |
+Checkout Form | An order gets created when submitted the form. | <span style="color:green">Pass</span> |
+Login Link | Clicking the link redirects to the account sign in page. | <span style="color:green">Pass</span> |
+Register Link | Clicking the link redirects to the account sign up page. | <span style="color:green">Pass</span> |
+Save Information Check | Checking the box update the user's profile information during the checkout process. | <span style="color:green">Pass</span> |
+Adjust Bag Link | Clicking the link redirects to shopping bag page. | <span style="color:green">Pass</span> |
 
 
 #### Profile Page
 
 Element | Expected Outcome | Pass/Fail |
 --- | --- | --- |
-Update Information Form | User's information gets updated when submitting the form. | Pass |
-Order Link | Clicking the link redirects to order view. | Pass |
-
-
-#### Favorites Page
-Element | Expected Outcome | Pass/Fail |
---- | --- | --- |
-Remove Link | Clicking the link removes the product from the user's favorites list. | Pass |
-
-
-#### Reviews Page
-Element | Expected Outcome | Pass/Fail |
---- | --- | --- |
-Product Link | Clicking the link redirect to the product details page. | Pass |
-Edit Link | Clicking the link redirect to the edit review page. | Pass |
-Delete Link | Clicking the link deletes the review from the database. | Pass |
-
-
-#### Add Review Page
-
-Element | Expected Outcome | Pass/Fail |
---- | --- | --- |
-Add Review Form | Review gets registered to the database when submitting the form. | Pass |
-Cancel Button | Clicking the button redirects to the product details page. | Pass |
-
-
-#### Edit Review Page
-
-Element | Expected Outcome | Pass/Fail |
---- | --- | --- |
-Edit Review Form | Review gets updated when submitting the form. | Pass |
-Cancel Button | Clicking the button redirects to the products page. | Pass |
-
-
-#### Organizations Page
-Element | Expected Outcome | Pass/Fail |
---- | --- | --- |
-Learn More Button | Clicking the button opens the organization's page on a separate tab. | Pass |
-Donate Button | Clicking the button opens the organization's donation page on a separate tab. | Pass |
+Update Information Form | User's information gets updated when submitting the form. | <span style="color:green">Pass</span> |
+Order Link | Clicking the link redirects to order view. | <span style="color:green">Pass</span> |
 
 
 ## Unit Testing
 
-Unit tests were written for views on the favorites and reviews app, practicing test-driven development on those methods.
+Unit tests were written for views on the adenapp app, practicing test-driven development on those methods.
+
+![Test AdenApp Views](/media/testing_files/test-views.jpg)
