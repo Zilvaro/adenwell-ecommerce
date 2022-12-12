@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from products.models import Product
 
 
-# Create your models here.
 class Review(models.Model):
     """ Review model """
     product = models.ForeignKey(Product,

@@ -57,6 +57,11 @@ The working version of the AdenWell e-commerce app can be found [here](https://a
       - [Add/Edit Product](#addedit-product)
     - [Shopping Bag Page](#shopping-bag-page)
     - [Checkout \& Success Payment Page](#checkout--success-payment-page)
+    - [Reviews Page](#reviews-page)
+      - [My reviews](#my-reviews)
+    - [Reviews CRUD](#reviews-crud)
+      - [Add Review](#add-review)
+      - [Edit Review](#edit-review)
     - [Profile Page](#profile-page)
     - [Contact Page](#contact-page)
     - [Accounts Pages](#accounts-pages)
@@ -344,9 +349,10 @@ The database model has been designed using [lucidapp](https://lucid.app/). The t
 ![AdenWell E-commerce Database Model](/media/readme_files/database-model.png)
 
 
-Some of the new models here - Carousel content management , Media and category database, Contact Message clients registrattion:
+Some of the new models here - Carousel content management , Media and category database, Contact Message clients registration, Reviews:
 
-![Adenapp models](/media/readme_files/new-models.jpg)
+![Adenapp models-1](/media/readme_files/new-models-1.JPG)
+![Adenapp models-2](/media/readme_files/new-models-2.JPG)
 
 #### Wireframes
 
@@ -512,7 +518,7 @@ As a real FB page has been in a build-process, the mock-up version was used for 
 
 * An "Add to Bag" button is available to add the desired quantity of the product to the shopping bag.
 
-* A reviews link is available, indicating how many reviews the product has received and to toggle the reviews. 
+* All reviews the product has received are being displayed on the reviews section at the bottom of the page. 
 
 * Sort functionality allows the shopper to sort the products either by date created or rating.
 
@@ -562,6 +568,47 @@ As a real FB page has been in a build-process, the mock-up version was used for 
 * Descriptive error messages are displayed in case there is any issue with the payment information provided.
 
 * Display thepayment is complete and the order confirmation email has been sent to the email address provided.
+
+
+### Reviews Page
+
+#### My reviews
+![Adenwell product-MyReview-desktop](/media/readme_files/reviews-myreviews.JPG)
+![Adenwell product-MyReview-mobile](/media/readme_files/reviews-myreviews-mobile.JPG)
+
+* Display the reviews the registered shopper has provided and the review's information.
+
+* Provide a link back to the product.
+
+* Links to edit and delete the reviews are present for each review.
+
+
+### Reviews CRUD
+
+#### Add Review
+![Adenwell review-Add](/media/readme_files/review-add.JPG)
+![Adenwell review-Error](/media/readme_files/review-error-alreadysubmitted.JPG)
+![Adenwell review-Success](/media/readme_files/review-submitted.JPG)
+
+* Display the product being reviewed.
+
+* Provide a form for the registered shopper to be able to add review to the product.
+
+* Display error if user has already submitted the review for this product
+
+* Inform user when he successfully subbmitted the review  
+
+#### Edit Review
+![Adenwell review-Edit](/media/readme_files/review-edit.JPG)
+![Adenwell review-Updated](/media/readme_files/review-updated-notification.JPG)
+![Adenwell review-Deleted](/media/readme_files/review-deleted.JPG)
+
+* Provide a prefilled form for the registered shopper to be able to update their existing reviews.
+
+* Notify user that he is in editing mode 
+  
+* Inform user when he successfully updated the review or deleted it  
+
 
 
 ### Profile Page

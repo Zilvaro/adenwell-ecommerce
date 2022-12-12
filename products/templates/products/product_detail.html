@@ -14,6 +14,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Product details -->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
@@ -168,18 +169,17 @@
                 <a href="{% url 'add_review' product.id %}" class="btn btn-main hvr-back-pulse">
                     <span class="text-uppercase">Leave a Review</span>
                 </a>
-        </div>
-            <div class="extra-space"></div>
+            </div>            
         </div>
     </div>
 </div>
+<div class="extra-space"></div>
 
-
-</div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- JS scripts located in separate files -->
 {% include 'products/includes/quantity_input_script.html' %}
 {% include 'products/includes/review_sorting_script.html' %}
 {% endblock %}
