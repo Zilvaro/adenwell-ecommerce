@@ -306,6 +306,9 @@ Increase Quantity Button | Increases the quantity on the input form. | <span sty
 Keep Shopping Button | Clicking the button redirects to the products page. | <span style="color:green">Pass</span> |
 Add To Bag Button | Clicking the button adds the specified quantity of the product to the shopping bag. | <span style="color:green">Pass</span> |
 Sort By Selector | Sort by functionality sort the reviews depending on the selection. | <span style="color:green">Pass</span> |
+Review Edit Link | Clicking the link redirects to the edit review page. | <span style="color:green">Pass</span> |
+Review Delete Link | Clicking the link delete the review from the database. | <span style="color:green">Pass</span> |
+Leave A Review Button | Clicking the button redirects to the add review page. | <span style="color:green">Pass</span> |
 
 
 #### Add Product Page
@@ -357,8 +360,30 @@ Update Information Form | User's information gets updated when submitting the fo
 Order Link | Clicking the link redirects to order view. | <span style="color:green">Pass</span> |
 
 
+#### My Reviews Page
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Link | Clicking the link redirect to the product details page. | <span style="color:green">Pass</span> |
+Edit Link | Clicking the link redirect to the edit review page. | <span style="color:green">Pass</span> |
+Delete Link | Clicking the link deletes the review from the database. | <span style="color:green">Pass</span> |
+
+
+#### Add Review Page
+
+Element | Expected Outcome | <span style="color:green">Pass</span> |
+--- | --- | --- |
+Add Review Form | Review gets registered to the database when submitting the form. | <span style="color:green">Pass</span> |
+Cancel Button | Clicking the button redirects to the product details page. | <span style="color:green">Pass</span> |
+
+
+#### Edit Review Page
+
+Element | Expected Outcome | <span style="color:green">Pass</span> |
+--- | --- | --- |
+Edit Review Form | Review gets updated when submitting the form. | <span style="color:green">Pass</span> |
+Cancel Button | Clicking the button redirects to the products page. | <span style="color:green">Pass</span> |
+
+
 ## Unit Testing
 
-Unit tests were written for views on the adenapp app, practicing test-driven development on those methods.
-
-![Test AdenApp Views](/media/testing_files/test-views.jpg)
+Unit tests were written for views on the adenapp and reviews app, practicing test-driven development on those methods.
