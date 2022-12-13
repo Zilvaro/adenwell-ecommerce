@@ -556,6 +556,9 @@ As a real FB page has been in a build-process, the mock-up version was used for 
 ### Checkout & Success Payment Page
 ![Adenwell checkout](/media/readme_files/checkout.JPG)
 ![Adenwell completed order](/media/readme_files/completed-order.JPG)
+![Adenwell order visibility admin](/media/readme_files/order-visibility-admin.JPG)
+![Adenwell order detail admin](/media/readme_files/order-detail-admin.JPG)
+![Adenwell order confirmation email](/media/readme_files/order-confirmation-email.JPG)
 
 * Provide a checkout form for the shopper to complete the purchase and provide the necessary contact, shipping and payment information.
 
@@ -567,7 +570,7 @@ As a real FB page has been in a build-process, the mock-up version was used for 
 
 * Descriptive error messages are displayed in case there is any issue with the payment information provided.
 
-* Display thepayment is complete and the order confirmation email has been sent to the email address provided.
+* Display the payment is complete and the order confirmation email has been sent to the email address provided.
 
 
 ### Reviews Page
@@ -1110,7 +1113,7 @@ As stated in the testing section, the appearance of the product quantity form on
 
 ## Acknowledgements
 
-* For README.md file/Deployment section, reference of github.com/josswe26/noplast was considered.
+* For README.md file/Deployment section, reference of github.com/josswe26 work was considered.
 
 * My tutor, Marcel, for his invaluable support, feedback and guidance through the whole process.
 
