@@ -207,6 +207,9 @@ Page | Lighthouse Report |
 | Checkout | ![Checkout Lighthouse Report](/media/testing_files/lighthouse-checkout.JPG) |
 | Checkout Success | ![Checkout Success Lighthouse Report](/media/testing_files/lighthouse-checkout-success.JPG) |
 | Profile | ![Profile Lighthouse Report](/media/testing_files/lighthouse-myprofile.JPG) |
+| Reviews My Reviews | ![MyReviews Lighthouse Report](/media/testing_files/lighthouse-my-reviews.JPG) |
+| Reviews Add Review | ![AddReview Lighthouse Report](/media/testing_files/lighthouse-add-review.JPG) |
+| Reviews Edit Review | ![EditReview Lighthouse Report](/media/testing_files/lighthouse-edit-review.JPG) |
 | Contact | ![Contact Lighthouse Report](/media/testing_files/lighthouse-contact-form.JPG) |
 
 The low score on the product admin pages, depends mostly on the aria-labels being suggested for the "Select image" button and the image example.
