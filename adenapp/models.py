@@ -42,7 +42,7 @@ class HomeMedia(models.Model):
     """A model to generate and keep images and texts for use in click-menu
        visuals on the home page"""
     media_name = models.CharField(max_length=200, unique=True)
-    media_id = models.IntegerField(default=0)
+    media_pid = models.IntegerField(default=0)
     media_image_url = models.URLField(max_length=1024, null=True, blank=True)
     media_image = models.ImageField(null=True, blank=True)
     media_image_alt_text = models.CharField(max_length=200,

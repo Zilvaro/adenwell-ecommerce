@@ -158,17 +158,17 @@
     <div class="row text-center">
       {% for media in homepage_media %}
       <div class="col-md-6 col-lg-4 px-5 mb-5">
-        {% if media.media_id == 1 %}
+        {% if media.media_pid == 1 %}
         <a href="{% url 'products' %}?category={{ media.media_name }}" class="text-decoration-none hvr-shrink">
           <img class="img-fluid rounded-top" src="{{ media.media_image.url }}" alt="{{media_image_alt_text}}">
           <h4 class="bg--light-blue c--white logo-text rounded-bottom py-1">{{media.media_text | safe }} </h4>
         </a>
-        {% elif media.media_id == 2 %}
+        {% elif media.media_pid == 2 %}
         <a href="{% url 'products' %}?category={{ media.media_name }}" class="text-decoration-none hvr-shrink">
           <img class="img-fluid rounded-top" src="{{ media.media_image.url }}" alt="{{media_image_alt_text}}">
           <h4 class="bg--light-blue c--white logo-text rounded-bottom py-1">{{media.media_text | safe }} </h4>
         </a>
-        {% elif media.media_id == 3 %}
+        {% elif media.media_pid == 3 %}
         <a href="{% url 'products' %}?category={{ media.media_name }}" class="text-decoration-none hvr-shrink">
           <img class="img-fluid rounded-top" src="{{ media.media_image.url }}" alt="{{media_image_alt_text}}">
           <h4 class="bg--light-blue c--white logo-text rounded-bottom py-1">{{media.media_text | safe }} </h4>

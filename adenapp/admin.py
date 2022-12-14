@@ -16,7 +16,7 @@ class ContentAdmin(SummernoteModelAdmin):
 @admin.register(HomeMedia)
 class MediaAdmin(SummernoteModelAdmin):
 
-    list_display = ('media_name', 'media_id',)
+    list_display = ('media_name', 'media_pid',)
     search_fields = ['media_name']
     summernote_fields = ('media_text',)
 

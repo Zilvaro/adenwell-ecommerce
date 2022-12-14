@@ -421,7 +421,18 @@ SEO steps taken in the projects to improve searchability
 2.	Use <strong>H2</strong> to add another critical promo keyword information on the page
 3.	Use the <strong>Strong</strong> html element when including some exact & long-tail keywords to provide visual emphasis and search engines will understand their semantic value from this too.
 4.	Always use keyword-rich, but still meaningfully describing picture <strong>ALT</strong> and image file name
-5.	Social network links must include the <strong>rel="noopener"</strong> attribute, which tells search engines not to include these links when it looks at our search engine ranking.
+5.	Social network links must include the <strong>rel="noopener nofollow"</strong> attribute, which tells search engines not to include these links when it looks at our search engine ranking.
+
+![External links noopener ](/media/readme_files/facebook-nofollow-rel.JPG)
+
+6. Include a sitemap.xml to allow search engite bot crawling
+
+![SEO sitemap.xml ](/media/readme_files/sitemap-xml.JPG)
+
+7. Include a robots.txt file to control search engine bot crawling
+
+![SEO robots.txt ](/media/readme_files/robots-txt.JPG)
+
 
 
 These keywords later will be continualy improved and refined and over time it should utlimately assist in the site ranking higher on Google.
