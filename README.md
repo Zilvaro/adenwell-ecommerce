@@ -457,7 +457,6 @@ As a real FB page has been in a build-process, the mock-up version was used for 
   
 
 ####  Header 
-![Adenwell header structure](/media/readme_files/header-1.JPG)
 ![Adenwell header product pages](/media/readme_files/header-2.JPG)
 
 * The header contains the main logo, navigation links and search product functionality.
