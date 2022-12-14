@@ -1106,6 +1106,8 @@ Create a custom_storages.py file in your project's root directory, and inside it
 
 * The code in Code Institute's video on the Boutique Ado project was used as the main reference point to set up an e-commerce / online store project using HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage.
 
+* Elements of the github.com/josswe26 work code were used for Review app and unit testing.
+
 
 ## Known Bugs
 
