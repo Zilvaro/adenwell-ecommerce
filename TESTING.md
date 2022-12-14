@@ -6,6 +6,18 @@
 
 [View the live website here](https://adenwell-ecommerce.herokuapp.com/)  
 
+
+
+The application was deployed to Heroku from the very beginning and the various testing was performed on both Git and Heroku continuously. Therefore, during the formal phase of testing, there were no major issues with code, links, functionality, databases, but a few little bugs/errors still surfaced, like:
+
+- there were no 'home' link available on medium screens in mobile-nav menu (easy fix with a change from lg to md)
+- carousel's 2nd window 2nd item still used 'test' link instead of actual (fixed the copy-paste bug)
+- on product & product_detail pages the nav menu was not visible on mobile screen (fixed by adding relevant code)
+- Stripe Keys were still left commented-out in env.py file (tags removed)
+- HomeMedia attribute was named media_id and instead of rendering according to the given number, it was rendering the media items according to actual id (changed media_id to media_pid. Lesson: be more careful with naming convention)
+
+
+
 ## Table of Contents
 
 1. [Testing User Stories](#testing-user-stories)
@@ -138,13 +150,18 @@
 
 #### As a site admin, I want to be able to remove product no longer available.
 
-* Products can be easily removed from the fron-end (CRUD) or admin backend.
+* Products can be easily removed from the front-end (CRUD) or admin backend.
 
 #### As a site admin, I want to display company/brand news and promotions.
 
-* The convienient form in admin allows to upload image, alt-text, heading, excerpt, article (photo, text, links, video).
-* Admin can choose in which carousel window to place the content and which position the content shall be within the window (eg. 1st or 3rd) 
+* The convenient form in admin allows to upload image, alt-text, heading, excerpt, article (photo, text, links, video).
 * Admin can upload any image file with title and use it in one of the category field to promote a specific category or offer (by allocating the image#), or use the image anywhere in the application.
+* Admin can choose in which carousel window or media (product-link) to place the content/images and which position the content shall be within the window (eg. 1st or 3rd)
+
+![Content Media placement order/pID 1](/media/testing_files/media-place-1.JPG)
+![Content Media placement order/pID selection or change](/media/testing_files/media-pid-change.JPG)
+![Content Media placement order/pID 2](/media/testing_files/media-place-2.JPG)
+
 
 
 ### Epic 6 - Newsletter Subscription & Contact
@@ -178,7 +195,7 @@
 
 ### Python
 
-Pylint was used continuously during the development process to analyze the Python code for programming errors.
+Pylint was used continuously during the development process to analyse the Python code for programming errors.
 
 The code was then checked for errors via the terminal command "python3 -m flake8". This returned a number of whitespace and indentation errors which were rectified where possible. (The unfixed errors were situated in root files such as .vscode/artictern)
 

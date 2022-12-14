@@ -43,7 +43,7 @@ The working version of the AdenWell e-commerce app can be found [here](https://a
       - [Typography](#typography)
   - [Marketing](#marketing)
     - [Search Engine Optimisation](#search-engine-optimisation)
-    - [FaceBook business page (mock-up)](#facebook-business-page-mock-up)
+    - [Facebook business page (mock-up)](#facebook-business-page-mock-up)
   - [Features - Finished Product](#features---finished-product)
     - [General](#general)
       - [Header](#header)
@@ -105,13 +105,13 @@ In effect, Adenwell is a business presentation and ecommerce application with fu
 
 * Structure is easy to understand and navigates effortlessly for an easy shopping experience.
 
-* The website desing and colors are appealing to the customers.
+* The website design and colors are appealing to the customers.
 
 * Customers are offered the opportunity to register an account.
 
 * Easy shopping process to create a pleaseant experince for the customer.
 
-* Flexible and clear content fiels alowing to present the company and products
+* Flexible and clear content fields allowing to present the company and products
 
 
 #### User Goals
@@ -197,7 +197,7 @@ Product quick view | 3 | 2
 Sort products by different criteria | 5 | 5
 Search products by name or description | 5 | 5
 Product details view | 5 | 5
-Display similar products at the a product details view | 3 | 2
+Display similar products at the product details view | 3 | 2
 Rate products | 4 | 3
 Write product reviews | 4 | 3
 Display current purchase total | 5 | 5
@@ -356,7 +356,7 @@ Some of the new models here - Carousel content management , Media and category d
 
 #### Wireframes
 
-[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
+[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements within the pages.
 
 Page | Mobile & Desktop Version 
 --- | --- | ---
@@ -404,7 +404,7 @@ A number of short and long tail keywords were then selected:
 
 * e-store
 * online store app
-* ecommerce platform for startups
+* ecommerce platform for start-ups
 * free app for my business
 * ecommerce and engagement app 
 * build online business community 
@@ -425,7 +425,7 @@ SEO steps taken in the projects to improve searchability
 
 ![External links noopener ](/media/readme_files/facebook-nofollow-rel.JPG)
 
-6. Include a sitemap.xml to allow search engite bot crawling
+6. Include a sitemap.xml to allow search engine bot crawling
 
 ![SEO sitemap.xml ](/media/readme_files/sitemap-xml.JPG)
 
@@ -435,10 +435,10 @@ SEO steps taken in the projects to improve searchability
 
 
 
-These keywords later will be continualy improved and refined and over time it should utlimately assist in the site ranking higher on Google.
+These keywords later will be continually improved and refined and over time it should ultimately assist in the site ranking higher on Google.
 
 
-### FaceBook business page (mock-up)
+### Facebook business page (mock-up)
 
 As a real FB page has been in a build-process, the mock-up version was used for this project:
 
@@ -610,7 +610,7 @@ As a real FB page has been in a build-process, the mock-up version was used for 
 
 * Display error if user has already submitted the review for this product
 
-* Inform user when he successfully subbmitted the review  
+* Inform user when he successfully submitted the review  
 
 #### Edit Review
 ![Adenwell review-Edit](/media/readme_files/review-edit.JPG)
@@ -782,7 +782,7 @@ The testing documentation can be found [here](https://github.com/Zilvaro/adenwel
 
 ## Deployment
 
-The project was developed using[GitPod](https://gitpod.io/) workspace. The code was commited to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/") using the terminal. The web application is deployed on Heroku as Github Pages is not able to host a Python project. Static and media files are being stored in AWS S3. The repository is hosted on Github.
+The project was developed using[GitPod](https://gitpod.io/) workspace. The code was committed to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/") using the terminal. The web application is deployed on Heroku as Github Pages is not able to host a Python project. Static and media files are being stored in AWS S3. The repository is hosted on Github.
 
 
 ### How To Use This Project
@@ -858,7 +858,7 @@ This project is deployed on Heroku for production, with all static and media fil
 1. Navigate to Heroku.com, create a new account or login if you already have an account. On the dashboard page, click "Create New App" button. Give the app a name, the name must be unique with hypens between words. Set the region closest to you, and click "Create App".   
 2. On the resources tab, provision a new Heroku Postgres database.  
 3. Configure variables on Heroku by navigating to Settings, and click on Reveal Config Vars. You may not have all the values yet. Add the others as you progress through the steps.   
-   Varables | Key   
+   Variables | Key   
    ---| ---   
    AWS_ACCESS_KEY_ID | your_access_key_id_from_AWS   
    AWS_SECRET_ACCESS_KEY | your_secret_access_key_from_AWS  
@@ -941,7 +941,7 @@ This project is deployed on Heroku for production, with all static and media fil
    ```
    git push heroku main
    ```
-14. Go to the app's dashboard on Heroku and go to Deploy. Connect the app to Github by clicking Github and search for the repository. Click connect. Also enable the automatic deploy by clicking Enable Automatic Deploys, so that everytime we push to github, the code will automatically be deployed to Heroku as well.  
+14. Go to the app's dashboard on Heroku and go to Deploy. Connect the app to Github by clicking Github and search for the repository. Click connect. Also enable the automatic deploy by clicking Enable Automatic Deploys, so that every time we push to github, the code will automatically be deployed to Heroku as well.  
 15. Go back to settings.py and replace the secret key setting with the call to get it from the environment, and use empty string as a default. 
    ```
    SECRET_KEY = os.environ.get('SECRET_KEY', '')
@@ -956,7 +956,7 @@ All static and media files in this project are stored in [Amazon Web Services S3
 1. Go to [Amazon Web Service website](https://aws.amazon.com/) and click on Create An AWS Account, or login if you already have an account.  
 2. Login to your new account, go to AWS Management Console and find service S3. Click on Create Bucket.   
    - Give it a name (I recommend naming your bucket to match the Heroku app name), and choose region closest to you.  
-   - In Object Ownership section, choose ACLS enabled. and Bucket Owner Preffered.   
+   - In Object Ownership section, choose ACLS enabled. and Bucket Owner Preferred.   
    - Uncheck box 'Block All Public Access'.  
    - Check box 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.'  
    - Click on Create Bucket, and your bucket is created.  
@@ -965,7 +965,7 @@ All static and media files in this project are stored in [Amazon Web Services S3
    - Index document: index.html  
    - Error document: error.html
    - Click on Save Changes.  
-4. Navigate to the Permissions tab. Scroll down to the bottom until you find Cross-origin resource sharing (CORS). Click on Edit, and paste in this Cors Configuration below, which is going to set up the required access between the Heroku app and this S3 bucket. Click on Save Changes. 
+4. Navigate to the Permissions tab. Scroll down to the bottom until you find Cross-origin resource sharing (CORS). Click on Edit, and paste in this CORS Configuration below, which is going to set up the required access between the Heroku app and this S3 bucket. Click on Save Changes. 
    ```
    [
       {
@@ -1056,7 +1056,7 @@ Here are the steps I took to connect Django to AWS:
       STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
       MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
    ```
-   Set the Config Vars on Heroku. On your app's dashboard on Heroku, go to Settings and click Reveal Convig Vars. Set this variables:
+   Set the Config Vars on Heroku. On your app's dashboard on Heroku, go to Settings and click Reveal Config Vars. Set this variables:
    Variables | Value
    --- | ---
    AWS_ACCESS_KEY_ID | your access key id from the csv file that you've downloaded before
@@ -1093,7 +1093,7 @@ Create a custom_storages.py file in your project's root directory, and inside it
 ### Content
 
 * Website content was written by the developer.
-* Example images & some quotes were taken from AdenWellnes internal database as well as:
+* Example images & some quotes were taken from AdenWellness internal database as well as:
     - [Aden Wellness](https://adenwell.com/)
     - [Aden Wellness Amazon](https://www.amazon.com/stores/Enjoyeveryday/page/41E280B2-E0B0-4A0A-8FAA-65A661BC23FB?ref_=ast_bln)
 * The categories images were taken from the following sources:
@@ -1130,7 +1130,7 @@ As stated in the testing section, the appearance of the product quantity form on
 
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
-* FIFA for organizing worldcup during project submission period and providing nesessary pauses from coding.
+* FIFA for organizing WorldCup during project submission period and providing necessary pauses from coding.
   
 
 [Go to the top](#table-of-contents)
